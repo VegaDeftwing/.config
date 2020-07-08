@@ -1,0 +1,31 @@
+#!/bin/bash
+
+title="ART"
+widthpercent=50
+
+typeset -A menu
+menu=(
+    [Krita (Fixed Scaling)]="QT_AUTO_SCREEN_SCALE_FACTOR=0 krita"
+    [GIMP]="gimp"
+    [Hexels]="steam steam://rungameid/428340"
+    [ColorTool]="steam steam://rungameid/948220"
+    [BlastFX]="steam steam://rungameid/940920"
+    [Dotgrid]="vivaldi-stable ~/git/ext/Dotgrid/desktop/sources/index.html"
+    [Ronin]="vivaldi-stable ~/git/ext/Ronin/index.html"
+    [Nimp]="vivaldi-stable https://nimp.app"
+    [Noodle (100x100)]="vivaldi-stable ~/git/ext/Noodle/index.html#100x100"
+    [Magicavoxel]="magicavoxel"
+    [Blender]="blender"
+    [Inkscape]="inkscape"
+    [Pixatool]="/run/media/vega/raid/FloatingProgs/Pixatool/linux64/pixatool"
+    [Fractorium]="/run/media/vega/raid/FloatingProgs/Fractorium-1.0.0.18-.x86_64/usr/bin/Fractorium-x86_64.AppImage"
+)
+menu_nrows=${#menu[@]}
+
+typeset -A colors
+colors=(
+    [-color-window]="#000000, #ffffff, #ffffff"
+    [-color-normal]="#ffffff, #000000, #eee8d5, #272727, #ffffff"
+    [-color-active]="#fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3"
+    [-color-urgent]="#fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3"
+)

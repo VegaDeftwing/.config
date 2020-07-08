@@ -1,0 +1,24 @@
+# exclude everything
+/*
+# include these
+!/i3
+!/alacritty
+!/broot
+!/compton.conf
+!/Cutter
+!/fltrdr
+!/htop
+!/kicad
+!/kitty
+!/jack
+!/nano
+!/ncmpcpp
+!/mpd
+!/nnn
+!/polybar
+!/rofi
+!/Thunar
+!/yay
+!/resh.toml
+!/.zshrc
+!/.gitignore

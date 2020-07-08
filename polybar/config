@@ -1,0 +1,590 @@
+[colors]
+background = ${xrdb:color0}
+background-alt = #1A1E21
+foreground = ${xrdb:foreground}
+foreground-alt = ${xrdb:foreground}
+primary = ${xrdb:color6}
+secondary = ${xrdb:color12}
+alert = ${xrdb:color1}
+border = ${xrdb:color2}
+
+[bar/aux3]
+monitor = "DisplayPort-1"
+width = 100%
+height = 30
+offset-x = 0
+background = ${colors.background-alt}
+;background = #AA000000
+foreground = ${colors.foreground-alt}
+font-0 = Gohu Font Nerd Font Mono:size=17
+font-1 = TengwarFormalCSUR:size=14
+font-2 = siji:pixelsize=12;0
+font-3 = Font Awesome 5 Free:pixelsize=10;3
+font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
+font-5 = Font Awesome 5 Brands:pixelsize=10;3
+border-top-size = 1
+;border-top-color = ${colors.border}
+border-size = 0
+padding-left = 2
+padding-right = 1
+module-margin-left = 0
+module-margin-right = 0
+line-size = 0
+bottom = true
+cursor-click = pointer
+cursor-scroll = ns-resize
+modules-left = mpd hostname who
+modules-center = i3
+modules-right = wireless-network ip uptime
+;wm-restack = i3
+;override-redirect = true
+
+overline-size = 0
+overline-color = #f00
+underline-size = 1
+underline-color = #00f
+
+border-bottom = 4
+border-bottom-color = ${colors.background}
+
+[bar/aux]
+monitor = "DisplayPort-0"
+width = 100%
+height = 30
+offset-x = 0
+background = ${colors.background-alt}
+;background = #AA000000
+foreground = ${colors.foreground-alt}
+font-0 = Gohu Font Nerd Font Mono:size=17
+font-1 = TengwarFormalCSUR:size=14
+font-2 = siji:pixelsize=12;0
+font-3 = Font Awesome 5 Free:pixelsize=10;3
+font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
+font-5 = Font Awesome 5 Brands:pixelsize=10;3
+border-top-size = 1
+;border-top-color = ${colors.border}
+border-size = 0
+padding-left = 2
+padding-right = 1
+module-margin-left = 0
+module-margin-right = 0
+line-size = 0
+bottom = true
+cursor-click = pointer
+cursor-scroll = ns-resize
+modules-left = mpd hostname who co2
+modules-center = i3
+modules-right = cpu memory wireless-network uptime
+;wm-restack = i3
+;override-redirect = true
+
+overline-size = 0
+overline-color = #f00
+underline-size = 1
+underline-color = #00f
+
+border-bottom = 4
+border-bottom-color = ${colors.background}
+
+[bar/vega]
+monitor = ${env:MONITOR:DisplayPort-2}
+bottom = true
+width = 100%
+height = 30
+offset-x = 0
+offset-y = 0
+border-top-size = 1
+;border-top-color = ${colors.border}
+background = ${colors.background-alt}
+;background = ${xrdb:color9}
+;background = #AA000000
+;scroll-down = bspwm-deskprev
+;background = ${colors.background}
+;foreground = ${colors.foreground}
+;background = ${colors.background-alt}
+foreground = ${colors.foreground-alt}
+
+overline-size = 0
+overline-color = #f00
+underline-size = 1
+underline-color = #00f
+
+border-bottom = 4
+border-bottom-color = ${colors.background}
+
+spacing = 1
+padding-left = 0
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = Gohu Font Nerd Font Mono:size=17
+font-1 = TengwarFormalCSUR:size=14
+font-2 = siji:pixelsize=12;0
+;font-3 = FontAwesome:pixelsize=18;0
+font-3 = Font Awesome 5 Free:pixelsize=10;3
+font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
+font-5 = Font Awesome 5 Brands:pixelsize=10;3
+
+modules-left = date volume
+modules-center = i3
+modules-right = cpu memory
+
+tray-position = right
+tray-padding = 2
+;wm-restack = bspwm
+;override-redirect = true
+
+[bar/aux2]
+monitor = ${env:MONITOR:HDMI-A-0}
+bottom = true
+width = 100%
+height = 30
+offset-x = 0
+offset-y = 0
+border-top-size = 1
+;border-top-color = ${colors.border}
+;background = ${xrdb:color9}
+;background = #AA000000
+;scroll-down = bspwm-deskprev
+background = ${colors.background-alt}
+;foreground = ${colors.foreground}
+;background = ${colors.background-alt}
+foreground = ${colors.foreground-alt}
+
+overline-size = 0
+overline-color = #f00
+underline-size = 1
+underline-color = #00f
+
+border-bottom = 4
+border-bottom-color = ${colors.background}
+
+spacing = 1
+padding-left = 0
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = Gohu Font Nerd Font Mono:size=17
+font-1 = TengwarFormalCSUR:size=14
+font-2 = siji:pixelsize=12;0
+font-3 = FontAwesome:pixelsize=14;0
+
+modules-left = date volume
+modules-center = i3
+modules-right = cpu memory
+
+tray-position = right
+tray-padding = 2
+;wm-restack = bspwm
+;override-redirect = true
+
+[module/wireless-network]
+type = internal/network
+interface = enp6s0
+interval = 3.0
+label-connected = %{F#ff0000} %{F-}%upspeed% %{F#00ff00} %{F-}%downspeed%
+
+[module/lock]
+type = custom/text
+content = 
+content-foreground = ${colors.alert}
+content-background = ${colors.background}
+content-padding = 2
+click-left = i3lock -i ~/images/bgi3lock.png -e
+
+[module/uptime]
+type = custom/script
+exec = uptime|awk '{print $2 " " $3 " " $4 " " $5 " " $6}'|cut -d ',' -f -2
+interval = 5
+;format-prefix=""
+format-prefix-foreground = ${colors.primary}
+format-foreground = ${colors.foreground}
+format-padding = 2
+;format-background = ${colors.background}
+
+[module/torDaemon]
+type = custom/script
+exec = ~/.config/polybar/status tor
+interval = 4
+format = <label>
+format-foreground = ${colors.foreground}
+;format-background = ${colors.background}
+format-prefix= " "
+format-padding = 1
+format-prefix-foreground = ${colors.alert}
+
+[module/reloadDns]
+type = custom/text
+content = "reload dnscrypt "
+content-suffix = 
+content-suffix-foreground = ${colors.foreground}
+content-foreground = ${colors.secondary}
+content-padding = 1
+content-background = ${colors.background-alt}
+; need into /etc/sudoers line bellow to work
+; username ALL=(ALL) NOPASSWD: /bin/sh /home/user/bin/fix_dnscrypt.sh
+click-left = "sudo sh ~/bin/fix_dnscrypt.sh"
+
+[module/dnsDaemon]
+type = custom/script
+exec = ~/.config/polybar/status dnscrypt-proxy
+interval = 4
+format = <label>
+format-foreground = ${colors.foreground}
+;format-background = ${colors.background}
+format-padding = 1
+
+[module/menu-apps]
+type = custom/menu
+;expand-right = true
+menu-0-0 = Browser
+menu-0-0-exec = menu-open-1
+menu-0-1 = Pentest
+menu-0-1-exec = menu-open-2
+menu-0-2 = Multimedia
+menu-0-2-exec = menu-open-3
+
+; browser side
+menu-1-0 = Vivaldi
+menu-1-0-exec = vivaldi_sec &
+menu-1-1 = Xombrero
+menu-1-1-exec = xombrero &
+menu-1-2 = w3m
+menu-1-2-exec = termite -e "w3m https://duckduckgo.com" &
+
+; pentest side
+menu-2-0 = Term
+menu-2-0-exec = termite &
+menu-2-1 = Wireshark
+menu-2-1-exec = wireshark-gtk &
+menu-2-2 = Msf
+menu-2-2-exec = termite -e msfconfsole &
+
+; multimedia side
+menu-3-0 = Wallpapers
+menu-3-0-exec = feh --geometry 200x200 --zoom fill -D 2 -d ~/images &
+menu-3-1 = Gimp
+menu-3-1-exec = gimp &
+menu-3-2 = Scrot
+menu-3-2-exec = scrot &
+
+format = <menu> <label-toggle>
+;format-background = ${colors.background}
+format-padding = 2
+label-open = "%{F#fa1B54} %{F-}"
+label-close = "%{F#4b62f1} %{F-}"
+label-separator = " . "
+
+[module/firewallDaemon]
+type = custom/script
+exec = ~/.config/polybar/status nftables
+interval = 4
+format = <label>
+format-padding = 4
+format-foreground = ${colors.secondary}
+format-prefix= " "
+format-prefix-foreground = ${colors.primary}
+
+[module/bspwm]
+type = internal/bspwm
+;pin-workspaces = true
+;inline-mode = false
+enable-click = true
+;enable-scroll = false
+;fuzzy-match = true
+;label-focused = %icon%
+;label-focused-background = ${colors.background-alt}
+;label-focused-underline= ${colors.primary}
+;label-focused-padding = 2
+
+;label-occupied = %icon%
+;label-occupied-padding = 2
+
+;label-urgent = %icon%
+;label-urgent-background = ${colors.alert}
+;label-urgent-padding = 2
+
+;label-empty = %icon%
+;label-empty-foreground = ${colors.foreground-alt}
+;label-empty-padding = 2
+
+;ws-icon-0 = web;
+;ws-icon-1 = term;
+;ws-icon-2 = chat;
+;ws-icon-3 = code;
+;ws-icon-4 = music;
+;ws-icon-default = 
+
+format = <label-state> <label-mode>
+
+;label-focused = %icon%
+label-focused-background = #88000000
+label-focused-underline= #ddd
+label-focused-padding = 4
+
+;label-occupied = %icon%
+label-occupied-padding = 4
+
+;label-urgent = %icon%
+label-urgent-padding = 4
+
+;label-empty = %icon%
+label-empty-foreground = #44ffffff
+label-empty-padding = 4
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+strip-wsnumbers = true
+pin-workspaces = true
+
+;label-mode-padding = 2
+;label-mode-foreground = #ffff
+;label-mode-background = #0000
+
+label-focused = %name%
+;label-focused-background = ${module/bspwm.label-focused-background}
+label-focused-underline = ${module/bspwm.label-focused-underline}
+label-focused-padding = ${module/bspwm.label-focused-padding}
+
+label-unfocused = %name%
+label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+
+label-urgent = %name%!
+;label-urgent-background = ${module/bspwm.label-urgent-background}
+;label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
+label-visible = %name%
+;label-visible-background = ${self.label-focused-background}
+;label-visible-underline = ${self.label-focused-underline}
+;label-visible-padding = ${self.label-focused-padding}
+
+
+[module/ip]
+type = custom/script
+interval = 2
+format = "<label> "
+format-prefix = :
+format-prefix-foreground = ${colors.primary}
+;format-background = ${colors.background}
+format-padding = 1
+exec = echo "$(dig +short myip.opendns.com @resolver1.opendns.com)"
+#exec-if = ping -c 1 gentoo.org
+
+[module/who]
+type = custom/script
+interval = 2
+format "<label> "
+format-padding = 1
+format-prefix = "w#"
+exec = echo "$(who | wc -l)"
+
+[module/wave]
+type = custom/text
+content = *~’^‘~*-,._.,-*~’^‘~*
+content-foreground = ${colors.primary}
+content-padding = 4
+
+[module/hostname]
+type = custom/script
+interval = 256
+format = "<label> "
+format-prefix = ":"
+format-prefix-foreground = ${colors.primary}
+format-padding = 0
+;format-background = ${colors.background}
+exec = echo "$(uname -n)"
+
+[module/mail]
+type = custom/script
+; 600s = 10min
+interval = 600
+format = " <label> "
+format-prefix = " "
+format-padding = 2
+;format-background = ${colors.background}
+format-prefix-foreground = ${colors.primary}
+exec = ~/.config/polybar/mails
+
+[module/tor]
+type = custom/text
+content = "reload tor "
+content-suffix = 
+content-suffix-foreground = ${colors.foreground}
+content-foreground = ${colors.primary}
+content-padding = 2
+content-background = ${colors.background}
+; need into /etc/sudoers line bellow to work
+; username ALL=(ALL) NOPASSWD: /bin/systemctl restart tor
+click-left = "sudo systemctl restart tor"
+
+[module/pacman-updates]
+type = custom/script
+;exec = pacman -Qu | wc -l
+exec = checkupdates | wc -l
+interval = 1000
+label = Repo: %output%
+format-foreground = ${colors.foreground}
+;format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = #FFBB00
+format-underline = #FFBB00
+
+[module/mpd]
+;https://github.com/jaagr/polybar/wiki/Module:-mpd
+type = internal/mpd
+;format-online =  "<label-song>   <icon-prev>  <icon-stop>  <toggle>  <icon-next>"
+format-online =  "<label-song>  <bar-progress>"
+;format-online =  "<label-song>  <bar-progress> <icon-prev>  <icon-stop>  <toggle>  <icon-next>"
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+label-song-maxlen = 40
+label-song-ellipsis = true
+bar-progress-width = 10
+bar-progress-indicator = 
+bar-progress-fill = 
+bar-progress-empty = 
+bar-progress-fill-foreground = #ff0
+;bar-progress-fill-background = ${colors.background}
+bar-progress-indicator-foreground = ${colors.foreground}
+format-online-foreground = ${colors.foreground}
+;format-online-background = ${colors.background}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "mem: "
+format-prefix-foreground = ${colors.secondary}
+;format-background = ${colors.background}
+format-padding = 2
+format-underline = ${xrdb:color4}
+label = %percentage_used%%
+
+[module/wlan]
+type = internal/network
+interface = wlp2s0
+interval = 3.0
+format-connected = <label-connected>
+;format-connected-background = ${colors.background}
+format-connected-padding = 2
+format-connected-underline = #9f78e1
+label-connected = " %essid% - %{F#aca074}%signal%% %{F-}"
+format-connected-prefix = "wlan0: "
+format-connected-prefix-foreground = ${colors.secondary}
+
+format-disconnected = "wlan offline"
+;format-disconnected-background = ${colors.background}
+format-disconnected-padding = 2
+label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.secondary}
+
+[module/eth]
+type = internal/network
+interface = enp8s0
+interval = 3.0
+
+format-connected-underline = ${xrdb:color3}
+format-connected-prefix = ""
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected =
+
+[module/date]
+type = internal/date
+interval = 5
+; french format
+#date = " %a %d %b  "
+date-alt = " %d-%m"
+time = "%a %b %d, %I:%M "
+time-alt = %H:%M
+format-prefix = "   "
+format-prefix-foreground = ${colors.primary}
+; format-suffix =
+format-suffix-foreground = ${colors.primary}
+format-underline = ${xrdb:color4}
+format-foreground = ${colors.foreground}
+format-padding = 1
+;format-background = ${colors.background}
+;format-background = #00000000
+label = %time% %date%
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume> <bar-volume>
+label-volume = "  "
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix =
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = "  "
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = │
+bar-volume-indicator-font = 2
+bar-volume-indicator-foreground = #ff
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground}
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format = <ramp-coreload>
+format-prefix =
+format-prefix-foreground = ${colors.foreground}
+;format-underline = #f90000
+label = %percentage%
+ramp-coreload-0 = %{F#5b}0%{F-}
+ramp-coreload-1 = %{F#5b}1%{F-}
+ramp-coreload-2 = %{F#5b}2%{F-}
+ramp-coreload-3 = %{F#cb4b16}3%{F-}
+ramp-coreload-4 = %{F#cb4b16}4%{F-}
+ramp-coreload-5 = %{F#dc322f}5%{F-}
+ramp-coreload-6 = %{F#dc322f}6%{F-}
+ramp-coreload-7 = %{F#dc322f}7%{F-}
+ramp-coreload-8 = %{F#dc322f}8%{F-}
+ramp-coreload-9 = %{F#dc322f}9%{F-}
+ramp-coreload-10 = %{F#dc322f}X%{F-}
+
+[module/co2]
+type = custom/script
+exec = /home/vega/.config/polybar/scripts/co2.sh
+tail = true
+format-foreground = ${colors.foreground}
+;format-background = ${colors.background}
+format-prefix = "CO2ppm:"
+format-suffix = "°C"
+format-prefix-foreground = #FFBB00
+format-underline = #FFBB00

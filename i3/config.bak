@@ -1,0 +1,420 @@
+# Yb      .dP            db
+# 88    dP            db    db                          `Yb    .dp'     ,         d'b,,',,d'b
+# 88                                                     88  dp'         88b
+# 88 d88b d88b     Ybaaaaaaaaad8                         88                 '    "Ybaaaaaaaaad8'
+# 88P   8Y   8b    .dP   dP   88        `Yb.d88b d88b    88.d88b.    `Yb.d888b    .dP'  dP'  88
+# 88    8P   88    88   88    88         88'   8Y   8b   88P'   Y8    88'    8Y   88   88    88
+# 88  .dP  .dP     Y8   Y8   .88         88    8P   88   88     8P    88     8P   Y8   Y8   .88
+# 8888888888888b.   Y88P8Y88PY88         88  ,dP  ,dP    88   ,dP     88   ,dP     Y88P`Y88P'88
+#                             88         88             .888888888b.  88                     88
+#                             88         88                           88                     88
+#                             Y8.       .8P                          .8P                     Y8.
+#        bd 38°3238
+#
+# Vega Deftwing User File №001-003
+# File Name and Typical Location
+# ##Name## config
+# ##Loc.## /home/vega/.config/i3/config
+# #i3 Gaps configuration file#
+#   _ _____             __                                           __ _
+#  (_)___ /  __      __/ /   __ _  __ _ _ __  ___    ___ ___  _ __  / _(_) __ _
+#  | | |_ \  \ \ /\ / / /   / _` |/ _` | '_ \/ __|  / __/ _ \| '_ \| |_| |/ _` |
+#  | |___) |  \ V  V / /   | (_| | (_| | |_) \__ \ | (_| (_) | | | |  _| | (_| |
+#  |_|____/    \_/\_/_/     \__, |\__,_| .__/|___/  \___\___/|_| |_|_| |_|\__, |
+#                           |___/      |_|                                |___/
+#
+#
+############################################################################################################
+#    __  __       _         ______                _   _
+#   |  \/  |     (_)       |  ____|              | | (_)
+#   | \  / | __ _ _ _ __   | |__ _   _ _ __   ___| |_ _  ___  _ __  ___
+#   | |\/| |/ _` | | '_ \  |  __| | | | '_ \ / __| __| |/ _ \| '_ \/ __|
+#   | |  | | (_| | | | | | | |  | |_| | | | | (__| |_| | (_) | | | \__ \
+#   |_|  |_|\__,_|_|_| |_| |_|   \__,_|_| |_|\___|\__|_|\___/|_| |_|___/
+#
+#
+
+#All of my mappings are for a dvorak keyboard, so, you probably want to change this
+set $mod Mod1
+set $kill apostrophe
+
+set $termmain urxvtc
+set $termsecondary cool-retro-term
+
+set $launcherkey o
+set $launcherkeysecondary Tab
+
+set $mainfont ShareTechMono-Regular 14px
+set $fontbar Ohsnap, TengwarFormalCSUR 14px
+
+set $reloadkey c
+set $restartkey r
+set $exitkey period
+set $lockkey x
+
+#the workspace fonts will probably render wrong unless you have everything
+#set up already. Fonts are from here:
+#http://freetengwar.sourceforge.net/formal.html
+set $workspace1name 1:
+set $workspace2name 2:
+set $workspace3name 3:
+set $workspace4name 4:
+set $workspace5name 5:
+set $workspace6name 6:
+set $workspace7name 7: ♬♪
+set $workspace8name 8: ✆
+set $workspace9name 9: β 
+set $workspace0name 10: α 
+
+set $scratchpadkey minus
+
+set $leftkbrd h
+set $rightkbrd s
+set $upkbrd t
+set $downkbrd n
+
+set $fullscreentogglekey semicolon
+set $parentcontainerfocuskey a
+set $floatingkey space
+
+set $splith i
+set $splitv d
+
+set $moveoutputleft y
+set $moveoutputright f
+
+set $layoutkeystack z
+set $layoutkeytab comma
+set $layoutkeysplit period
+
+#      |              |        |
+# ,---.|--- ,---.,---.|---     |---.,---.,---.
+# `---.|    ,---||    |        |   |,---||
+# `---'`---'`---^`    `---'    `---'`---^`
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always openrazer-daemon
+exec_always urxvtd
+
+# ,---.|              |        ,---.          |
+# `---.|--- ,---.,---.|---     `---.,   .,---.|--- ,---.,-.-.
+#     ||    ,---||    |            ||   |`---.|    |---'| | |
+# `---'`---'`---^`    `---'    `---'`---|`---'`---'`---'` ' '
+#                                   `---'
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+#Keyboard lights
+exec –no-startup-id openrazer-daemon
+#Power managment
+#Monitor Arangment
+#exec_always sh /home/vega/.config/i3/monitor_config4k.sh
+exec_always --no-startup-id xrandr --output DisplayPort-2 --auto
+#exec_always --no-startup-id xrandr --output DisplayPort-1 --right-of DisplayPort-0 --auto
+exec_always --no-startup-id xrandr --output HDMI-A-0 --right-of DisplayPort-2 --auto
+
+exec_always xset s off -dpms
+#Start Muted
+#exec_always "amixer set Master 0 25000"
+#Reload w/ GlaDOS voice
+exec_always "play /home/vega/.config/i3/GLaDOS_One_moment.wav"
+#Authentication dialog
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+bindsym control+mod1+r exec --no-startup-id rofi-theme-selector
+bindsym control+mod1+u exec --no-startup-id pavucontrol
+bindsym Print exec --no-startup-id scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+# Updater
+exec --no-startup-id pamac-tray
+
+# network
+exec --no-startup-id nm-applet
+
+# num lock activated
+exec_always --no-startup-id numlockx on
+#exec --no-startup-id pasystray
+exec --no-startup-id volumeicon
+#starts the compton composite manager, this long string was stollen. compton conf is around here somewhere...
+exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g = "i3bar"' --config ~/.config/compton.conf -b
+#reread the X resources, because, why would anything just work ._.
+exec_always "xrdb ~/.Xresources"
+#Start i3 lock screen locker & xautolock
+exec "xautolock -time 60 -locker '~/.config/i3/lock.sh'"
+#exec "syncthing-gtk"
+
+# exec "synergy"
+#Open Arduninos for Writing
+#exec "stty -F /dev/ttyUSB0 cs8 9600 ignbrk -brkint -icrnl -imaxbel -opost -onlcr -isig -icanon -iexten -echo -echoe -echok -echoctl -echoke noflsh -ixon -crtscts"
+#exec "stty -F /dev/ttyUSB1 cs8 9600 ignbrk -brkint -icrnl -imaxbel -opost -onlcr -isig -icanon -iexten -echo -echoe -echok -echoctl -echoke noflsh -ixon -crtscts"
+#Set inital lights and rad
+#exec --no-startup-id "python3 ~/.config/controllers/button2.py"
+#exec --no-startup-id "python2 ~/.config/controllers/rad.py"
+#exec --no-startup-id "python2 ~/.config/controllers/launchpad.py"
+
+#ohh, pretty wallpaper!
+#exec --no-startup-id "xwinwrap -b -sp -nf -ov -g 1920x1080 -- /usr/lib/xscreensaver/pong -window-id WID &"
+
+#Ohh, pretty wallpaper on my obscure screen setup
+#exec --no-startup-id "xwinwrap -b -sp -nf -ov -g 1920x1080+1920 -- /usr/lib/xscreensaver/binaryring -ring-radius 800 -particles-number 20000 -window-id WID &"
+#exec --no-startup-id "xwinwrap -b -sp -nf -ov -g 1920x1080 -- /usr/lib/xscreensaver/binaryring -ring-radius 400 -particles-number 10000 -window-id WID &"
+# exec --no-startup-id "xwinwrap -b -sp -nf -ov -g 1920x1080+5760 -- /usr/lib/xscreensaver/binaryring -ring-radius 400 -particles-number 10000 -window-id WID &"
+
+# exec_always --no-startup-id "~/xwinwrap.sh"
+
+#####################################################################################################################
+#################                          audio settings                                           #################
+#####################################################################################################################
+
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
+bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
+#https://github.com/acrisci/playerctl/
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
+
+# ,---.          |             .    ,          o     |    |
+# |---|,---.,---.|    ,   .    |    |,---.,---..,---.|---.|    ,---.,---.
+# |   ||   ||   ||    |   |     \  / ,---||    |,---||   ||    |---'`---.
+# `   '|---'|---'`---'`---|      `'  `---^`    ``---^`---'`---'`---'`---'
+#      |    |         `---'
+
+font pango:$mainfont
+bindsym $mod+u exec "urxvtc -e ranger"
+bindsym $mod+n exec "urxvtc -e ncmpcpp"
+#bindsym $mod+w exec "wal --backend colorthief -i ~/Pictures/wal" ; exec "sh ~/.config/polybar/launch.sh"
+bindsym $mod+Shift+$kill kill
+bindsym $mod+Return exec $termmain
+bindsym $mod+Shift+Return exec $termsecondary
+bindsym $mod+$fullscreentogglekey fullscreen toggle
+bindsym $mod+$floatingkey focus mode_toggle
+bindsym $mod+Shift+$floatingkey floating toggle
+bindsym $mod+$parentcontainerfocuskey focus parent
+bindsym $mod+$moveoutputright move workspace to output right
+bindsym $mod+$moveoutputleft move workspace to output left
+bindsym $mod+Shift+$scratchpadkey move scratchpad
+bindsym $mod+$scratchpadkey scratchpad show
+bindsym $mod+$splith split h
+bindsym $mod+$splitv split v
+bindsym $mod+$layoutkeystack layout stacking
+bindsym $mod+$layoutkeytab layout tabbed
+bindsym $mod+$layoutkeysplit layout toggle split
+bindsym $mod+Shift+$reloadkey reload
+bindsym $mod+Shift+$restartkey restart
+bindsym $mod+Shift+$exitkey exec "i3-nagbar -t warning -m 'Exit i3 and end X session?' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+$lockkey exec ~/.config/i3/lock.sh
+# ROFI
+bindsym $mod+o exec --no-startup-id "rofi -show run"
+#gnome-pie
+for_window [title="Gnome-Pie"] floating enable
+bindsym $mod+$launcherkeysecondary exec --no-startup-id "/usr/bin/gnome-pie -o 713"
+#exec_always "wal --backend colorthief -i /run/media/vega/RAID/Pictures/wal/arcade.jpg"
+exec "mpd"
+
+
+# ,   .          |                  ,---.         |
+# |\  |.   .,-.-.|---.,---.,---.    |---',---.,---|
+# | \ ||   || | ||   ||---'|        |    ,---||   |
+# `  `'`---'` ' '`---'`---'`        `    `---^`---'
+#Switch Kbdlayouts
+#numpad 7-9
+bindcode $mod+79 exec "setxkbmap dvorak"
+bindcode $mod+80 exec "setxkbmap us"
+bindcode $mod+81 exec "setxkbmap ucteng"
+#numpad 4-5
+bindcode $mod+83 exec "setxkbmap dvogreek"
+bindcode $mod+84 exec "setxkbmap dvomath"
+#bindcode $mod+85
+#numpad 1-3
+bindcode $mod+87 exec sh /home/vega/.config/i3/monitor_config1080.sh
+bindcode $mod+88 exec sh /home/vega/.config/i3/monitor_config4k.sh
+bindcode $mod+89 mode "resize"
+
+
+# |                  |                      ,---.
+# |---.,---.,---.,---|,---.,---.     |      |  _.,---.,---.,---.
+# |   ||   ||    |   ||---'|        -+-     |   |,---||   |`---.
+# `---'`---'`    `---'`---'`         |      `---'`---^|---'`---'
+#                                                     |
+#gaps inner 5
+#gaps outer 5
+new_window pixel 0
+#smart_gaps off
+for_window [class="dde-file-manager"] floating enable
+
+#                       _
+#                      | |
+#   __      _____  _ __| | _____ _ __   __ _  ___ ___  ___
+#   \ \ /\ / / _ \| '__| |/ / __| '_ \ / _` |/ __/ _ \/ __|
+#    \ V  V / (_) | |  |   <\__ \ |_) | (_| | (_|  __/\__ \
+#     \_/\_/ \___/|_|  |_|\_\___/ .__/ \__,_|\___\___||___/
+#                               | |
+#                               |_|
+
+workspace_auto_back_and_forth yes
+workspace_layout tabbed
+
+bindsym $mod+1 workspace $workspace1name; exec --no-startup-id "python3 ~/.config/controllers/razernumbers.py"
+bindsym $mod+2 workspace $workspace2name; exec --no-startup-id "python3 ~/.config/controllers/razernumbers.py"
+bindsym $mod+3 workspace $workspace3name; exec --no-startup-id "python3 ~/.config/controllers/razernumbers.py"
+bindsym $mod+4 workspace $workspace4name; exec --no-startup-id "python3 ~/.config/controllers/razernumbers.py"
+bindsym $mod+5 workspace $workspace5name; exec --no-startup-id "python3 ~/.config/controllers/razernumbers.py"
+bindsym $mod+6 workspace $workspace6name; exec --no-startup-id "python3 ~/.config/controllers/razernumbers.py"
+bindsym $mod+7 workspace $workspace7name; exec --no-startup-id "python3 ~/.config/controllers/razernumbers.py"
+bindsym $mod+8 workspace $workspace8name; exec --no-startup-id "python3 ~/.config/controllers/razernumbers.py"
+bindsym $mod+9 workspace $workspace9name; exec --no-startup-id "python3 ~/.config/controllers/razernumbers.py"
+bindsym $mod+0 workspace $workspace0name; exec --no-startup-id "python3 ~/.config/controllers/razernumbers.py"
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1name
+bindsym $mod+Shift+2 move container to workspace $workspace2name
+bindsym $mod+Shift+3 move container to workspace $workspace3name
+bindsym $mod+Shift+4 move container to workspace $workspace4name
+bindsym $mod+Shift+5 move container to workspace $workspace5name
+bindsym $mod+Shift+6 move container to workspace $workspace6name
+bindsym $mod+Shift+7 move container to workspace $workspace7name
+bindsym $mod+Shift+8 move container to workspace $workspace8name
+bindsym $mod+Shift+9 move container to workspace $workspace9name
+bindsym $mod+Shift+0 move container to workspace $workspace0name
+
+set $mainDisplay DP-1
+set $rightDisplay DVI-D-2
+set $leftDisplay HDMI-1
+
+#
+#Launchpad workspace Bindings
+#
+# DVI is rotatetd
+# HDMI is right
+# DP is center
+#Devsetup
+# workspace "GitKraken" output $leftDisplay
+# workspace "Atom" output $mainDisplay
+# workspace "Dev" output $rightDisplay
+# assign [class="Atom"] → Atom
+#Socialsetup
+# workspace "Telegram" output $leftDisplay
+# assign [class="Telegram"] → Telegram
+# workspace "GenChat2" output $mainDisplay
+# workspace "GenChat" output $rightDisplay
+#Web
+# workspace "Vivaldi" output $mainDisplay
+#one of these should work...
+# assign [class="Vivaldi"] → Vivaldi
+# assign [class="Vivaldi-snapshot"] → Vivaldi
+# assign [class="vivaldi-snapshot"] → Vivaldi
+# assign [class="Vivaldi-stable"] → Vivaldi
+# assign [class="vivaldi-stable"] → Vivaldi
+#PenTest
+assign [class="atom"] → $workspace3name
+assign [class="Typora"] → $workspace4name
+# assign [class="Lutris"] → $workspace6name
+# assign [class="Rhythmbox"] → $workspace7name
+# assign [class="Lollypop"] → $workspace7name
+assign [class="Telegram"] → $workspace8name
+# assign [class="Reditr_app"] → $workspace8name
+# assign [class="Hexchat"] → $workspace8name
+# assign [class="Caprine"] → $workspace8name
+# assign [class="Skype"] → $workspace8name
+assign [class="discord"] → $workspace8name
+assign [class="Vivaldi-stable"] → $workspace9name
+# assign [class="Firefox"] → $workspace0name
+#exec "typora ~/notes"
+#exec Telegram
+#exec discord
+#exec vivaldi-stable
+#exec atom
+#exec /opt/unreal-engine/Engine/Binaries/Linux/UE4Editor
+#exec blender
+
+#Change Focus
+#bindsym $mod+$leftkbrd focus left
+#bindsym $mod+$downkbrd focus down
+#bindsym $mod+$upkbrd focus up
+#bindsym $mod+$rightkbrd focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+#Move Focused
+bindsym $mod+Shift+$leftkbrd move left
+bindsym $mod+Shift+$downkbrd move down
+bindsym $mod+Shift+$upkbrd move up
+bindsym $mod+Shift+$rightkbrd move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym t resize grow height 10 px or 10 ppt
+        bindsym n resize shrink height 10 px or 10 ppt
+        bindsym s resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "vnc" {
+	bindsym $mod+l exec cool-retro-term
+	bindsym $mod + Escape mode "default"
+}
+
+mode "scripts" {
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+for_window [title="Copying"] floating enable
+for_window [title="Deleting"] floating enable
+for_window [title="Moving"] floating enable
+#       ,gggg,
+#     ,88"""Y8b,              ,dPYb,
+#    d8"     `Y8              IP'`Yb
+#   d8'   8b  d8              I8  8I
+#  ,8I    "Y88P'              I8  8'
+#  I8'             ,ggggg,    I8 dP    ,ggggg,     ,gggggg,
+#  d8             dP"  "Y8ggg I8dP    dP"  "Y8ggg  dP""""8I
+#  Y8,           i8'    ,8I   I8P    i8'    ,8I   ,8'    8I
+#  `Yba,,_____, ,d8,   ,d8'  ,d8b,_ ,d8,   ,d8'  ,dP     Y8,
+#    `"Y8888888 P"Y8888P"    8P'"Y88P"Y8888P"    8P      `Y8
+#
+
+#colors
+set $hilidk #c50ed2
+set $hilibt #00fefe
+set $gray00 #181818
+set $gray01 #999999
+set $gray02 #292d2e
+set $urgent #FF0000
+set $urgind #900000
+
+#set_from_resource $fg i3wm.color7 #f0f0f0
+#set_from_resource $bg i3wm.color2 #f0f0f0
+#set_from_resource $ug i3wm.color3 #f0f0f0
+
+#client.focused          $bg     $ug     $fg  $bg       $bg
+#client.focused_inactive $bg     $bg     $fg  $bg       $bg
+#client.unfocused        $bg     $bg     $fg  $bg       $bg
+#client.urgent           $bg     $bg     $fg  $bg       $bg
+#client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+#client.background       $bg
+
+# class                 border  backgr. text    indicator
+client.focused          $hilidk #75117c #ffffff $gray00
+client.focused_inactive $hilibt $gray00 $gray01 $gray00
+client.unfocused        $gray00 $gray00 $gray01 $gray02
+client.urgent           $urgent $urgent $gray00 $urgind
+client.placeholder      $gray00 $gray01 $gray00 $gray00
+#
+#             .-                       .-.    .-.                                                         .
+#     .;;;.`-'            .'          ; -'   (_) )-.                                                  ...;...
+#    ;;  (_)  . ,';. .-..'    .-.   -;--       .:   \   .-.   .-.     ,  :   . ,';.,';.  .-.  . ,';.   .'
+#    .;;; .-. ;;  ;;:   ;    ;   ;' .         .:'    \ ;   ;';       ;   ;   ;;  ;;  ;;.;.-'  ;;  ;; .;
+#   ;;  .;  ;';  ;; `:::'`.  `;;'`.'        .-:.      )`;;'  `;;;;'.'`..:;._';  ;;  ';  `:::'';  ;;.;
+#   `;.___.' ;    `.                       (_/  `----'                     _;        `-'     ;    `.

@@ -1,0 +1,30 @@
+#!/bin/bash
+
+title="OS CTRL:"
+widthpercent=50
+
+typeset -A menu
+menu=(
+    [Power Off]="systemctl poweroff"
+    [Windows]="windows"
+    [Reboot (Linux)]="systemctl reboot"
+    [htop]="deepin-terminal -e htop"
+    [vmstat]="deepin-terminal -e vmstat"
+    [Nethogs]="deepin-terminal -e sudo nethogs"
+    [Radeontop]="deepin-terminal -e sudo radeontop"
+    [systemctl list-unit-files]="deepin-terminal -e systemctl list-unit-files"
+    [systemctl list-timers]="deepin-terminal -e systemctl list-timers"
+    [dmesg]="deepin-terminal -e dmesg"
+    [STOP Firewall]="systemctl stop firewalld.service"
+    [START Firewall]="systemctl start firewalld.service"
+
+)
+menu_nrows=${#menu[@]}
+
+typeset -A colors
+colors=(
+    [-color-window]="#000000, #ffffff, #ffffff"
+    [-color-normal]="#ffffff, #000000, #eee8d5, #272727, #ffffff"
+    [-color-active]="#fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3"
+    [-color-urgent]="#fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3"
+)

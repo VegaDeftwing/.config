@@ -1,0 +1,22 @@
+#!/bin/bash
+
+title="P2P/Decent"
+widthpercent=50
+
+typeset -A menu
+menu=(
+    [BeakerBrowser]="steam-native"
+    [Patchage]="steam steam://rungameid/632360"
+    [P2P Check]="deepin-terminal -e /home/vega/.config/i3/crofi/p2pchk.sh"
+    [Service Check]="deepin-terminal -e /home/vega/.config/i3/crofi/servicechk.sh"
+    [Transmission]="transmission-gtk"
+)
+menu_nrows=${#menu[@]}
+
+typeset -A colors
+colors=(
+    [-color-window]="#000000, #ffffff, #ffffff"
+    [-color-normal]="#ffffff, #000000, #eee8d5, #272727, #ffffff"
+    [-color-active]="#fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3"
+    [-color-urgent]="#fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3"
+)

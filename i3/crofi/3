@@ -1,0 +1,26 @@
+#!/bin/bash
+
+title="CODE (SECONDARY)"
+widthpercent=50
+
+typeset -A menu
+menu=(
+    [GDB-Frontend]="deepin-terminal -w ~/git/ext/gdb-frontend/ -e ./gdbfrontend"
+    [Cutter]="Cutter"
+    [htop]="deepin-terminal -e htop"
+    [Quartus]="/opt/altera/19.1/quartus/bin/quartus"
+    [Vivado]="/opt/Xilinx/Vivado/2019.2/bin/vivado"
+    [STM32CubeIDE]="/opt/stm32cubeide/stm32cubeide"
+    [Processing]="processing"
+    [ArduinoIDE]="arduino"
+    [GitAhead]="gitahead"
+)
+menu_nrows=${#menu[@]}
+
+typeset -A colors
+colors=(
+    [-color-window]="#000000, #ffffff, #ffffff"
+    [-color-normal]="#ffffff, #000000, #eee8d5, #272727, #ffffff"
+    [-color-active]="#fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3"
+    [-color-urgent]="#fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3"
+)

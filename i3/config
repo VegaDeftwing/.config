@@ -43,7 +43,7 @@ exec_always --no-startup-id echo "55" > /home/vega/leds.fifo
 set $mod Mod4
 set $kill apostrophe
 
-set $termmain alacritty
+set $termmain kitty
 
 #set $termmain kitty
 #set $termsecondary "kitty -e zsh"
@@ -154,7 +154,7 @@ exec --no-startup-id nm-applet
 # num lock activated
 exec_always --no-startup-id numlockx on
 #exec --no-startup-id pasystray
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 #starts the compton composite manager, this long string was stollen. compton conf is around here somewhere...
 #compton disabled mid July 2019 due to crashes with AMDGPU
 exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g = "i3bar"' --config ~/.config/compton.conf -b
@@ -190,15 +190,13 @@ bindsym XF86AudioStop exec --no-startup-id mpc toggle
 
 font pango:$mainfont
 #bindsym $mod+a exec "deepin-terminal -e ranger"
-bindsym $mod+n exec "deepin-terminal -e ncmpcpp"
 #bindsym $mod+w exec "wal --backend colorthief -i ~/Pictures/wal" ; exec "sh ~/.config/polybar/launch.sh"
 #Next 3 lines give fib style layout
 #default_orientation vertical
 #for_window [class=".*"] split toggle
 #bindsym $mod+Shift+$kill split toggle kill
 bindsym $mod+Shift+$kill kill
-bindsym $mod+Return exec $termmain
-bindsym $mod+Shift+Return exec "deepin-terminal -e ~/.config/i3/geti3.sh"
+bindsym $mod+Return exec $termmain -1
 
 bindsym $mod+$fullscreentogglekey fullscreen toggle
 bindsym $mod+$floatingkey focus mode_toggle
@@ -251,7 +249,6 @@ gaps inner 5
 gaps outer 5
 new_window pixel 0
 #smart_gaps on
-for_window [class="dde-file-manager"] floating enable
 # for rounding
 # border_radius 20
 #                       _

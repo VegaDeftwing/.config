@@ -1,6 +1,7 @@
 ; Thunar GtkAccelMap rc-file         -*- scheme -*-
 ; this file is an automated accelerator map dump
 ;
+; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1489091195323731-3" "")
 ; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1526631663081446-14" "")
 ; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1492232362549799-1" "")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/8fd76053aef91359b909d5a975e2143d" "")
@@ -15,7 +16,6 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-side-pane-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-ascending" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-network" "")
-; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1526630606202525-4" "")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/9d51a90161a811f4136a184098470db7" "")
 ; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1489089852658523-2" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/switch-next-tab" "<Primary>Page_Down")
@@ -29,7 +29,6 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/properties" "<Alt>Return")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/open-in-new-window" "<Primary><Shift>o")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/back" "<Alt>Left")
-; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1526670239648084-2" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/sendto-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/c5e44ad5f29aaf2093af1050647b173b" "")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/0d6cd80e459a2a2e606e0b902ee9ea97" "")
@@ -68,6 +67,7 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/cut" "<Primary>x")
 ; (gtk_accel_path "<Actions>/ThunarWindow/switch-previous-tab" "<Primary>Page_Up")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/83d206262b270b7f13882b41d3bf4a16" "")
+; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1526628754365261-1" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-by-type" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/close-all-windows" "<Primary><Shift>w")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-location-selector-menu" "")

@@ -392,6 +392,9 @@ for_window [title="Moving"] floating enable
 #    `"Y8888888 P"Y8888P"    8P'"Y88P"Y8888P"    8P      `Y8
 #
 
+#for redshift
+exec_always --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+
 #colors
 set $hilidk #FF4342
 set $hilibt #FF6635

@@ -51,8 +51,8 @@ function geti3 {
 	if [ $currentws = "1" ]; then
     echo "⎧\033[1msudo pacman -F\033[0m to id package by binary"
     echo "⎪\033[1msudo reflector -c us -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist\033[0m"
-    echo "⎪"
-    echo "⎥"
+    echo "⎪sudo mount -o remount,size=16G,noatime /tmp to expand /tmp"
+    echo "⎪journalctl -b -1 to get previous boot information"
     echo "⎩"
     hr
 	elif [ $currentws = "2" ]; then	
@@ -60,8 +60,8 @@ function geti3 {
     echo "⎧\033[1mValgrind\033[0m to check program for leaks and other errors"
     echo "⎪\033[1mStrace\033[0m runs the specified command until it exits.  It intercepts and records the system calls"
     echo "⎪\twhich are called by a process and the signals which are re‐ceived by a process"
-    echo "⎥\033[1mCode .\033[0m to open current working directory in VSCode"
-    echo "⎥\033[1mHexyl\033[0m to open hex viewer"
+    echo "⎪\033[1mCode .\033[0m to open current working directory in VSCode"
+    echo "⎪\033[1mHexyl\033[0m to open hex viewer"
     echo "⎩\033[1mclang-tidy --fix/--fix-errors033[0m to find some problems"
     hr
   elif [ $currentws = "3" ]; then	
@@ -69,22 +69,22 @@ function geti3 {
     echo "⎧\033[1mValgrind\033[0m to check program for leaks and other errors"
     echo "⎪\033[1mStrace\033[0m runs the specified command until it exits.  It intercepts and records the system calls"
     echo "⎪\twhich are called by a process and the signals which are re‐ceived by a process"
-    echo "⎥\033[1mCode .\033[0m to open current working directory in VSCode"
-    echo "⎥\033[1mHexyl\033[0m to open hex viewer"
+    echo "⎪\033[1mCode .\033[0m to open current working directory in VSCode"
+    echo "⎪\033[1mHexyl\033[0m to open hex viewer"
     echo "⎩\033[1mclang-tidy --fix/--fix-errors033[0m to find some problems"
     hr
   elif [ $currentws = "4" ]; then
     echo "⎧\033[1mWaifu2x-converter-cpp\033[0m to scale art"
     echo "⎪"
     echo "⎪"
-    echo "⎥"
+    echo "⎪"
     echo "⎩"
     hr
   elif [ $currentws = "5" ]; then	
     echo "⎧\033[1mtmines -f\033[0m to play Minesweeper"
     echo "⎪"
     echo "⎪"
-    echo "⎥"
+    echo "⎪"
     echo "⎩"
     hr
   elif [ $currentws = "6" ]; then	
@@ -94,7 +94,7 @@ function geti3 {
     echo "⎧\033[1mtypora\033[0m to edit .md files,\033[1m mdcat \033[0m to view .md files"
     echo "⎪\033[1mevince\033[0m to view PDFS"
     echo "⎪\033[1moptipng\033[0m to optimize png files, \033[1mjpegoptim\033[0m to optimize jpeg"
-    echo "⎥"
+    echo "⎪"
     echo "⎩"
     hr
   elif [ $currentws = "7" ]; then	

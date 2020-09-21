@@ -49,39 +49,45 @@ function geti3 {
 	| jq '.[] | select(.focused==true).name' \
 	| cut -d"\"" -f2 | cut -d":" -f1)
 	if [ $currentws = "1" ]; then
-    echo "⎧\033[1msudo pacman -F\033[0m to id package by binary"
-    echo "⎪\033[1msudo reflector -c us -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist\033[0m"
+    echo "⎧sudo pacman -F to id package by binary"
+    echo "⎪sudo reflector -c us -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist\033[0m"
     echo "⎪sudo mount -o remount,size=16G,noatime /tmp to expand /tmp"
     echo "⎪journalctl -b -1 to get previous boot information"
     echo "⎩"
     hr
 	elif [ $currentws = "2" ]; then	
 	  cd ~/git/local
-    echo "⎧\033[1mValgrind\033[0m to check program for leaks and other errors"
-    echo "⎪\033[1mStrace\033[0m runs the specified command until it exits.  It intercepts and records the system calls"
+    echo "⎧Valgrind to check program for leaks and other errors"
+    echo "⎪Strace runs the specified command until it exits.  It intercepts and records the system calls"
     echo "⎪\twhich are called by a process and the signals which are re‐ceived by a process"
-    echo "⎪\033[1mCode .\033[0m to open current working directory in VSCode"
-    echo "⎪\033[1mHexyl\033[0m to open hex viewer"
-    echo "⎩\033[1mclang-tidy --fix/--fix-errors033[0m to find some problems"
+    echo "⎪Code . to open current working directory in VSCode"
+    echo "⎪Hexyl to open hex viewer"
+    echo "⎪perf record --call-graph dwarf -o perf.data ./myprogram --> Hotspot"
+    echo "⎪clang-tidy --fix/--fix-errors to find some problems, similarly 'scan-build -V make/gcc -flags' to run"
+    echo "⎪\t a clang based static analyzer"
+    echo "⎩\tAlso, be aware of compile flags like --O3, -march -ffast-math, etc."
     hr
   elif [ $currentws = "3" ]; then	
 	  cd ~/git/local
-    echo "⎧\033[1mValgrind\033[0m to check program for leaks and other errors"
-    echo "⎪\033[1mStrace\033[0m runs the specified command until it exits.  It intercepts and records the system calls"
+    echo "⎧Valgrind to check program for leaks and other errors"
+    echo "⎪Strace runs the specified command until it exits.  It intercepts and records the system calls"
     echo "⎪\twhich are called by a process and the signals which are re‐ceived by a process"
-    echo "⎪\033[1mCode .\033[0m to open current working directory in VSCode"
-    echo "⎪\033[1mHexyl\033[0m to open hex viewer"
-    echo "⎩\033[1mclang-tidy --fix/--fix-errors033[0m to find some problems"
+    echo "⎪Code . to open current working directory in VSCode"
+    echo "⎪Hexyl to open hex viewer"
+    echo "⎪perf record --call-graph dwarf -o perf.data ./myprogram --> Hotspot"
+    echo "⎪clang-tidy --fix/--fix-errors to find some problems, similarly 'scan-build -V make/gcc -flags' to run"
+    echo "⎪\t a clang based static analyzer"
+    echo "⎩\tAlso, be aware of compile flags like --O3, -march -ffast-math, etc."
     hr
   elif [ $currentws = "4" ]; then
-    echo "⎧\033[1mWaifu2x-converter-cpp\033[0m to scale art"
+    echo "⎧Waifu2x-converter-cpp to scale art"
     echo "⎪"
     echo "⎪"
     echo "⎪"
     echo "⎩"
     hr
   elif [ $currentws = "5" ]; then	
-    echo "⎧\033[1mtmines -f\033[0m to play Minesweeper"
+    echo "⎧tmines -f to play Minesweeper"
     echo "⎪"
     echo "⎪"
     echo "⎪"
@@ -91,9 +97,9 @@ function geti3 {
 	  cd ~/git/local/openg2
     git status
     hr
-    echo "⎧\033[1mtypora\033[0m to edit .md files,\033[1m mdcat \033[0m to view .md files"
-    echo "⎪\033[1mevince\033[0m to view PDFS"
-    echo "⎪\033[1moptipng\033[0m to optimize png files, \033[1mjpegoptim\033[0m to optimize jpeg"
+    echo "⎧typora to edit .md files, mdcat  to view .md files"
+    echo "⎪evince to view PDFS"
+    echo "⎪optipng to optimize png files, jpegoptim to optimize jpeg"
     echo "⎪"
     echo "⎩"
     hr
@@ -113,8 +119,11 @@ function geti3 {
 
 geti3
 
+PATH="$PATH:/home/.cargo/bin:/run/media/vega/raid/FloatingProgs"
+
 # Alises
 alias cb="git branch | fzf | sed 's/\* //g' | xargs -I '{}' git checkout {}"
+alias pen="xinput map-to-output $(xinput | grep 'Tablet Monitor Pen Pen (0)' | awk -F '=' '{print $2}' | cut -f 1) HDMI-A-0"
 #alias diff='diff-so-fancy'
 alias ping='prettyping'
 #alias t='python2 ~/t.py --task-dir ~/tasks --list tasks'
@@ -165,8 +174,8 @@ echo "Extra Utils:"
 echo "⎧autojump (j), lsd/exa (mapped to ls,lss), bat (mapped to cat), (hr) for a line, (reptyr) to grab process"
 echo "⎪(tldr) for a shorter man page, (fltrdr) for fast reading, prettyping (replaces ping), (\033[1mrg\033[0m) for ripgrep"
 echo "⎪(fd) a simpiler alt to find, (fzf) for fuzzy-find stdin or cd, (ncdu) for du,"
-echo "⎥(\033[1mentr\033[0m) for fs monitoring, (t) for tasks, (noti) term->notification, (progress) for mon progress"
-echo "⎥(\033[1mbr\033[0m) for broot ls+cd alternative"
+echo "⎪(\033[1mentr\033[0m) for fs monitoring, (t) for tasks, (noti) term->notification, (progress) for mon progress"
+echo "⎪(\033[1mbr\033[0m) for broot ls+cd alternative"
 echo "⎩\033[1mctrl+r\033[0m binding to access history via resh, \033[1mcb\033[0m to change current git branch"
 #screenfetch
 #task calendar

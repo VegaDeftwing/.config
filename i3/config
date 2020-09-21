@@ -330,6 +330,7 @@ no_focus [class=”plasmashell”]
 exec telegram-desktop
 exec discord
 exec whalebird
+exec /run/media/vega/raid/FloatingProgs/Condution.AppImage
 #workspace $workspace9name output DisplayPort-1
 #workspace $workspace3name output HDMI-A-0
 #workspace $workspace8name output DisplayPort-0

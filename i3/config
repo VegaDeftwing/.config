@@ -43,7 +43,7 @@ exec_always --no-startup-id echo "55" > /home/vega/leds.fifo
 set $mod Mod4
 set $kill apostrophe
 
-set $termmain kitty
+set $termmain deepin-terminal
 
 #set $termmain kitty
 #set $termsecondary "kitty -e zsh"
@@ -132,6 +132,8 @@ exec --no-startup-id rad daemon-radicle
 # Start Self Hosted Services
 exec --no-startup-id /home/vega/.gem/ruby/2.6.0/bin/task-web
 exec "mpd"
+exec --no-startup-id docsify serve /run/media/vega/win/Vega/Productions/Journal -p 3001
+exec --no-startup-id docsify serve /home/vega/git/local/openg3 -p 3000
 #netdata is on 19999
 #website is on 80
 #Tasker-Connects to pi
@@ -157,7 +159,8 @@ exec_always --no-startup-id numlockx on
 #exec --no-startup-id volumeicon
 #starts the compton composite manager, this long string was stollen. compton conf is around here somewhere...
 #compton disabled mid July 2019 due to crashes with AMDGPU
-exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g = "i3bar"' --config ~/.config/compton.conf -b
+#exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g = "i3bar"' --config ~/.config/compton.conf -b
+exec --no-startup-id picom
 # try dif rendering backend?
 #reread the X resources, because, why would anything just work ._.
 exec_always "xrdb ~/.Xresources"
@@ -309,7 +312,7 @@ assign [class="discord"] → $workspace8name
 assign [class="whalebird"] $workspace8name
 assign [class="Vivaldi-stable"] → $workspace9name
 assign [class="Firefox"] → $workspace10name
-
+assign [class="MasterPlan v0.5.4-1"] → $workspace6name
 
 #Plasma Compatibility
 exec --no-startup-id wmctrl -c Plasma
@@ -330,7 +333,10 @@ no_focus [class=”plasmashell”]
 exec telegram-desktop
 exec discord
 exec whalebird
-exec /run/media/vega/raid/FloatingProgs/Condution.AppImage
+exec --no-startup-id typora ~/git/local/openg3
+exec --no-startup-id typora /run/media/vega/win/VegaProductions/Journal
+exec --no-startup-id ~/git/ext/masterplan/bin/MasterPlan-Linux-Release/MasterPlan
+exec --no-startup-id typora /run/media/vega/win/VegaProductions/ImageFiles/Inktober2020/list.md
 #workspace $workspace9name output DisplayPort-1
 #workspace $workspace3name output HDMI-A-0
 #workspace $workspace8name output DisplayPort-0

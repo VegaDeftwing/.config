@@ -57,8 +57,8 @@ vivaldi-stable ~/git/ext/Noodle/index.html#100x100            #Noodle, 100x100
 magicavoxel                                                   #Magicavoxel
 blender                                                       #Blender
 inkscape                                                      #Inkscape
-/run/media/vega/raid/FloatingProgs/Pixatool/linux64/pixatool  #Pixatool
-/run/media/vega/raid/FloatingProgs/Fractorium-1.0.0.18-.x86_64/usr/bin/Fractorium-x86_64.AppImage #Fractorium
+/mnt/data/FloatingProgs/Pixatool/linux64/pixatool  #Pixatool
+/mnt/data/FloatingProgs/Fractorium-1.0.0.18-.x86_64/usr/bin/Fractorium-x86_64.AppImage #Fractorium
 " | fzf) 
     zsh -c $cmd
   echo "⎧\033[1mWaifu2x-converter-cpp\033[0m to scale art"

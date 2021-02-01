@@ -184,7 +184,7 @@ tray-padding = 2
 type = internal/network
 interface = enp6s0
 interval = 3.0
-label-connected = %{F#ff0000} %{F-}%upspeed% %{F#00ff00} %{F-}%downspeed%
+;label-connected = %{F#ff0000} %{F-}%upspeed% %{F#00ff00} %{F-}%downspeed%
 
 [module/lock]
 type = custom/text
@@ -208,7 +208,7 @@ format-padding = 2
 type = custom/script
 exec = ~/.config/polybar/status tor
 interval = 4
-format = <label>
+
 format-foreground = ${colors.foreground}
 ;format-background = ${colors.background}
 format-prefix= " "
@@ -231,7 +231,7 @@ click-left = "sudo sh ~/bin/fix_dnscrypt.sh"
 type = custom/script
 exec = ~/.config/polybar/status dnscrypt-proxy
 interval = 4
-format = <label>
+
 format-foreground = ${colors.foreground}
 ;format-background = ${colors.background}
 format-padding = 1
@@ -281,7 +281,7 @@ label-separator = " . "
 type = custom/script
 exec = ~/.config/polybar/status nftables
 interval = 4
-format = <label>
+
 format-padding = 4
 format-foreground = ${colors.secondary}
 format-prefix= " "
@@ -378,7 +378,6 @@ exec = echo "$(dig +short myip.opendns.com @resolver1.opendns.com)"
 [module/who]
 type = custom/script
 interval = 2
-format "<label> "
 format-padding = 1
 format-prefix = "w#"
 exec = echo "$(who | wc -l)"
@@ -566,9 +565,9 @@ format-prefix =
 format-prefix-foreground = ${colors.foreground}
 ;format-underline = #f90000
 label = %percentage%
-ramp-coreload-0 = %{F#5b}0%{F-}
-ramp-coreload-1 = %{F#5b}1%{F-}
-ramp-coreload-2 = %{F#5b}2%{F-}
+ramp-coreload-0 = %{F#fff8f8f2}0%{F-}
+ramp-coreload-1 = %{F#fff8f8f2}1%{F-}
+ramp-coreload-2 = %{F#fff8f8f2}2%{F-}
 ramp-coreload-3 = %{F#cb4b16}3%{F-}
 ramp-coreload-4 = %{F#cb4b16}4%{F-}
 ramp-coreload-5 = %{F#dc322f}5%{F-}

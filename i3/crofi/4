@@ -17,8 +17,8 @@ menu=(
     [Magicavoxel]="magicavoxel"
     [Blender]="blender"
     [Inkscape]="inkscape"
-    [Pixatool]="/run/media/vega/raid/FloatingProgs/Pixatool/linux64/pixatool"
-    [Fractorium]="/run/media/vega/raid/FloatingProgs/Fractorium-1.0.0.18-.x86_64/usr/bin/Fractorium-x86_64.AppImage"
+    [Pixatool]="/mnt/data/FloatingProgs/Pixatool/linux64/pixatool"
+    [Fractorium]="/mnt/data/FloatingProgs/Fractorium-1.0.0.18-.x86_64/usr/bin/Fractorium-x86_64.AppImage"
 )
 menu_nrows=${#menu[@]}
 

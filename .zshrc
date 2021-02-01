@@ -53,8 +53,9 @@ function geti3 {
     echo "⎪sudo reflector -c us -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist\033[0m"
     echo "⎪sudo mount -o remount,size=16G,noatime /tmp to expand /tmp"
     echo "⎪journalctl -b -1 to get previous boot information"
-    echo "⎩"
-    hr
+    echo "⎩borgmatic to update backups"
+	duf
+	hr
 	elif [ $currentws = "2" ]; then	
 	  cd ~/git/local
     echo "⎧Valgrind to check program for leaks and other errors"
@@ -119,7 +120,7 @@ function geti3 {
 
 geti3
 
-PATH="$PATH:/home/.cargo/bin:/run/media/vega/raid/FloatingProgs"
+PATH="$PATH:/home/.cargo/bin:/mnt/data/FloatingProgs"
 
 # Alises
 alias cb="git branch | fzf | sed 's/\* //g' | xargs -I '{}' git checkout {}"
@@ -267,4 +268,5 @@ export PATH=/home/vega/.local/bin:$PATH
 
 [ -f ~/.resh/shellrc ] && source ~/.resh/shellrc
 
-source /home/vega/.config/broot/launcher/bash/br
+#source /home/vega/.config/broot/launcher/bash/brautoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/bitcomplete bit

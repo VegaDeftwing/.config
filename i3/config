@@ -113,6 +113,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #     ||    ,---||    |            ||   |`---.|    |---'| | |
 # `---'`---'`---^`    `---'    `---'`---|`---'`---'`---'` ' '
 #                                   `---'
+# Start the screensaver
+exec --no-startup-id xscreensaver
 
 # Start Clipboard Service
 exec --no-startup-id xfce4-clipman
@@ -130,10 +132,8 @@ exec --no-startup-id rad daemon-radicle
 ## DL Clients
 
 # Start Self Hosted Services
-exec --no-startup-id /home/vega/.gem/ruby/2.6.0/bin/task-web
+#exec --no-startup-id /home/vega/.gem/ruby/2.6.0/bin/task-web
 exec "mpd"
-exec --no-startup-id docsify serve /run/media/vega/win/Vega/Productions/Journal -p 3001
-exec --no-startup-id docsify serve /home/vega/git/local/openg3 -p 3000
 #netdata is on 19999
 #website is on 80
 #Tasker-Connects to pi
@@ -223,6 +223,7 @@ bindsym $mod+shift+o exec --no-startup-id "~/.config/rofi/splatmoji/splatmoji co
 bindsym $mod+a exec --no-startup-id "~/.config/i3/crofi/crofi.sh"
 bindsym $mod+shift+a exec --no-startup-id speedcrunch
 
+bindsym $mod+shift+semicolon floating enable, resize set 11520 2160, move position 0 px 0 px
 
 # ,   .          |                  ,---.         |
 # |\  |.   .,-.-.|---.,---.,---.    |---',---.,---|
@@ -248,6 +249,7 @@ bindsym $mod+r mode "resize"
 # |   ||   ||    |   ||---'|        -+-     |   |,---||   |`---.
 # `---'`---'`    `---'`---'`         |      `---'`---^|---'`---'
 #                                                     |
+default_border normal 5
 gaps inner 5
 gaps outer 5
 new_window pixel 0
@@ -333,10 +335,10 @@ no_focus [class=”plasmashell”]
 exec telegram-desktop
 exec discord
 exec whalebird
-exec --no-startup-id typora ~/git/local/openg3
-exec --no-startup-id typora /run/media/vega/win/VegaProductions/Journal
+exec --no-startup-id typora /mnt/win/VegaProductions/OpGuidesHugoSrc
+exec --no-startup-id typora /mnt/win/VegaProductions/Journal
 exec --no-startup-id ~/git/ext/masterplan/bin/MasterPlan-Linux-Release/MasterPlan
-exec --no-startup-id typora /run/media/vega/win/VegaProductions/ImageFiles/Inktober2020/list.md
+#exec --no-startup-id typora /mnt/win/VegaProductions/ImageFiles/Inktober2020/list.md
 #workspace $workspace9name output DisplayPort-1
 #workspace $workspace3name output HDMI-A-0
 #workspace $workspace8name output DisplayPort-0

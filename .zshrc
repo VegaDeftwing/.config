@@ -3,7 +3,7 @@
   source /etc/profile.d/autojump.zsh
 # Path to your oh-my-zsh installation.
   export ZSH=/home/vega/.oh-my-zsh
-
+#eval "$(starship init zsh)"
 #(cat ~/.cache/wal/sequences &)
 #echo "
 #   Yb      .dP            db
@@ -269,4 +269,4 @@ export PATH=/home/vega/.local/bin:$PATH
 [ -f ~/.resh/shellrc ] && source ~/.resh/shellrc
 
 #source /home/vega/.config/broot/launcher/bash/brautoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/bitcomplete bit
+#complete -o nospace -C /usr/local/bin/bitcomplete bit

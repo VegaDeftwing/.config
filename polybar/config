@@ -48,35 +48,21 @@ border-bottom = 4
 border-bottom-color = ${colors.background}
 
 [bar/aux]
-monitor = "DisplayPort-0"
+monitor = ${env:MONITOR:DisplayPort-0}
+bottom = true
 width = 100%
 height = 30
 offset-x = 0
-background = ${colors.background-alt}
-;background = #AA000000
-foreground = ${colors.foreground-alt}
-font-0 = Gohu Font Nerd Font Mono:size=17
-font-1 = TengwarFormalCSUR:size=14
-font-2 = siji:pixelsize=12;0
-font-3 = Font Awesome 5 Free:pixelsize=10;3
-font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
-font-5 = Font Awesome 5 Brands:pixelsize=10;3
+offset-y = 0
 border-top-size = 1
 ;border-top-color = ${colors.border}
-border-size = 0
-padding-left = 2
-padding-right = 1
-module-margin-left = 0
-module-margin-right = 0
-line-size = 0
-bottom = true
-cursor-click = pointer
-cursor-scroll = ns-resize
-modules-left = mpd hostname who co2
-modules-center = i3
-modules-right = cpu memory wireless-network uptime
-;wm-restack = i3
-;override-redirect = true
+;background = ${xrdb:color9}
+;background = #AA000000
+;scroll-down = bspwm-deskprev
+background = ${colors.background-alt}
+;foreground = ${colors.foreground}
+;background = ${colors.background-alt}
+foreground = ${colors.foreground-alt}
 
 overline-size = 0
 overline-color = #f00
@@ -85,6 +71,26 @@ underline-color = #00f
 
 border-bottom = 4
 border-bottom-color = ${colors.background}
+
+spacing = 1
+padding-left = 0
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = Gohu Font Nerd Font Mono:size=17
+font-1 = TengwarFormalCSUR:size=14
+font-2 = siji:pixelsize=12;0
+font-3 = FontAwesome:pixelsize=14;0
+
+modules-left = hostname uptime wireless-network
+modules-center = i3
+modules-right = cpu memory
+
+tray-position = right
+tray-padding = 2
+;wm-restack = bspwm
+;override-redirect = true
 
 [bar/vega]
 monitor = ${env:MONITOR:DisplayPort-2}
@@ -130,8 +136,6 @@ modules-left = date volume
 modules-center = i3
 modules-right = cpu memory
 
-tray-position = right
-tray-padding = 2
 ;wm-restack = bspwm
 ;override-redirect = true
 
@@ -175,8 +179,8 @@ modules-left = date volume
 modules-center = i3
 modules-right = cpu memory
 
-tray-position = right
-tray-padding = 2
+;tray-position = right
+;tray-padding = 2
 ;wm-restack = bspwm
 ;override-redirect = true
 

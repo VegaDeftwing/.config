@@ -164,6 +164,8 @@ exec --no-startup-id picom
 # try dif rendering backend?
 #reread the X resources, because, why would anything just work ._.
 exec_always "xrdb ~/.Xresources"
+#screensaver managment
+exec --no-startup-id caffeine
 
 # PERIPHERAL HARDWARE SPECIFIC SETTINGS
 exec --no-startup-id "python2 ~/.config/usb/rad.py"

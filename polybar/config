@@ -1,6 +1,6 @@
 [colors]
 background = ${xrdb:color0}
-background-alt = #1A1E21
+background-alt = #282A36
 foreground = ${xrdb:foreground}
 foreground-alt = ${xrdb:foreground}
 primary = ${xrdb:color6}
@@ -44,7 +44,7 @@ overline-color = #f00
 underline-size = 1
 underline-color = #00f
 
-border-bottom = 4
+border-bottom = 1
 border-bottom-color = ${colors.background}
 
 [bar/aux]
@@ -69,7 +69,7 @@ overline-color = #f00
 underline-size = 1
 underline-color = #00f
 
-border-bottom = 4
+border-bottom = 1
 border-bottom-color = ${colors.background}
 
 spacing = 1
@@ -115,7 +115,7 @@ overline-color = #f00
 underline-size = 1
 underline-color = #00f
 
-border-bottom = 4
+border-bottom = 1
 border-bottom-color = ${colors.background}
 
 spacing = 1
@@ -161,7 +161,7 @@ overline-color = #f00
 underline-size = 1
 underline-color = #00f
 
-border-bottom = 4
+border-bottom = 1
 border-bottom-color = ${colors.background}
 
 spacing = 1

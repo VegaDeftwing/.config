@@ -140,7 +140,8 @@ exec "mpd"
 #Pi-hole on pi
 
 # Start System Services
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+# exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+exec --no-startup-id dunst
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # Monitor Setup
 exec_always sh /home/vega/.config/i3/monitor.sh
@@ -427,12 +428,21 @@ set_from_resource $bg i3wm.color2 #f0f0f0
 #client.background       $bg
 
 # class                 border  backgr. text    indicator
-client.focused          $hilidk #1C2124 #ffffff $gray00
-client.focused_inactive $hilibt $gray00 $gray01 $gray00
-client.unfocused        $gray00 $gray00 $gray01 $gray02
-client.urgent           $urgent $urgent $gray00 $urgind
-client.placeholder      $gray00 $gray01 $gray00 $gray00
-client.background		$gray00
+# client.focused          $hilidk #1C2124 #ffffff $gray00
+# client.focused_inactive $hilibt $gray00 $gray01 $gray00
+# client.unfocused        $gray00 $gray00 $gray01 $gray02
+# client.urgent           $urgent $urgent $gray00 $urgind
+# client.placeholder      $gray00 $gray01 $gray00 $gray00
+# client.background		$gray00
+
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+
+client.background       #F8F8F2
+
 #
 #             .-                       .-.    .-.                                                         .
 #     .;;;.`-'            .'          ; -'   (_) )-.                                                  ...;...

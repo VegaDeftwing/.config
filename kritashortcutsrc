@@ -1,0 +1,10 @@
+[Shortcuts]
+decrease_opacity={
+increase_opacity=}
+make_brush_color_darker=Ctrl+[
+make_brush_color_desaturated=Alt+[
+make_brush_color_lighter=Ctrl+]
+make_brush_color_saturated=Alt+]
+rotate_canvas_left=_
+rotate_canvas_right=+
+split_alpha_into_mask='

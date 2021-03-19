@@ -1,0 +1,320 @@
+{
+  "RecentPlanList": ["/mnt/win/VegaProductions/Journal/master2.plan"],
+  "TargetFPS": 60,
+  "UnfocusedFPS": 10,
+  "ScreenshotsPath": "",
+  "AutoloadLastPlan": true,
+  "AutoReloadThemes": true,
+  "DisableSplashscreen": false,
+  "DisableMessageLog": false,
+  "DisableAboutDialogOnStart": true,
+  "AutoReloadResources": false,
+  "TransparentBackground": false,
+  "BorderlessWindow": false,
+  "PanToFocusOnZoom": true,
+  "WindowPosition": {
+    "X": 9,
+    "Y": 33,
+    "Width": 3822,
+    "Height": 2086
+  },
+  "SaveWindowPosition": true,
+  "ScrollwheelSensitivity": 1,
+  "SmoothPanning": true,
+  "CustomFontPath": "",
+  "FontSize": 15,
+  "GUIFontSizeMultiplier": "200%",
+  "Keybindings": {
+    "Add to Selection Modifier": {
+      "Key": 340
+    },
+    "Center View to Origin": {
+      "Key": 259
+    },
+    "Checkbox: Toggle Completion": {
+      "Key": 67
+    },
+    "Copy Tasks": {
+      "Key": 67,
+      "Modifiers": [341]
+    },
+    "Create Checkbox Task": {
+      "Key": 49,
+      "Modifiers": [341]
+    },
+    "Create Image Task": {
+      "Key": 52,
+      "Modifiers": [341]
+    },
+    "Create Line Task": {
+      "Key": 55,
+      "Modifiers": [341]
+    },
+    "Create Map Task": {
+      "Key": 56,
+      "Modifiers": [341]
+    },
+    "Create New Task": {
+      "Key": 78,
+      "Modifiers": [341]
+    },
+    "Create Note Task": {
+      "Key": 51,
+      "Modifiers": [341]
+    },
+    "Create Progression Task": {
+      "Key": 50,
+      "Modifiers": [341]
+    },
+    "Create Sound Task": {
+      "Key": 53,
+      "Modifiers": [341]
+    },
+    "Create Table Task": {
+      "Key": 48,
+      "Modifiers": [341]
+    },
+    "Create Timer Task": {
+      "Key": 54,
+      "Modifiers": [341]
+    },
+    "Create Whiteboard Task": {
+      "Key": 57,
+      "Modifiers": [341]
+    },
+    "Cut Tasks / Text": {
+      "Key": 88,
+      "Modifiers": [341]
+    },
+    "Delete Tasks": {
+      "Key": 261
+    },
+    "Deselect All Tasks": {
+      "Key": 256
+    },
+    "Edit Tasks": {
+      "Key": 257
+    },
+    "Faster Pan": {
+      "Key": 340
+    },
+    "Find Next Task": {
+      "Key": 70,
+      "Modifiers": [341]
+    },
+    "Find Previous Task": {
+      "Key": 70,
+      "Modifiers": [341, 340]
+    },
+    "Focus View on Tasks": {
+      "Key": 70
+    },
+    "Line: Select Next Line Ending": {
+      "Key": 67
+    },
+    "Line: Select Previous Line Ending": {
+      "Key": 88
+    },
+    "Load Project": {
+      "Key": 79,
+      "Modifiers": [341]
+    },
+    "Map / Whiteboard: Toggle Pencil Tool": {
+      "Key": 81
+    },
+    "Map: Toggle Rectangle Tool": {
+      "Key": 82
+    },
+    "Pan Down": {
+      "Key": 83
+    },
+    "Pan Left": {
+      "Key": 65
+    },
+    "Pan Right": {
+      "Key": 68
+    },
+    "Pan Up": {
+      "Key": 87
+    },
+    "Paste Content Onto Board": {
+      "Key": 86,
+      "Modifiers": [341, 340]
+    },
+    "Paste Tasks / Text": {
+      "Key": 86,
+      "Modifiers": [341]
+    },
+    "Progression: Decrement Completion": {
+      "Key": 88
+    },
+    "Progression: Increment Completion": {
+      "Key": 67
+    },
+    "Progression: Toggle Completion": {
+      "Key": 86
+    },
+    "Quit MasterPlan": {
+      "Key": 81,
+      "Modifiers": [341]
+    },
+    "Redo": {
+      "Key": 90,
+      "Modifiers": [341, 340]
+    },
+    "Remove From Selection Modifier": {
+      "Key": 342
+    },
+    "Save Project": {
+      "Key": 83,
+      "Modifiers": [341]
+    },
+    "Save Project As...": {
+      "Key": 83,
+      "Modifiers": [340, 341]
+    },
+    "Select / Slide Task Above": {
+      "Key": 265
+    },
+    "Select / Slide Task Below": {
+      "Key": 264
+    },
+    "Select / Slide Task Left": {
+      "Key": 263
+    },
+    "Select / Slide Task Right": {
+      "Key": 262
+    },
+    "Select All Tasks": {
+      "Key": 65,
+      "Modifiers": [341]
+    },
+    "Select Bottom Task in Stack": {
+      "Key": 267
+    },
+    "Select Next Nearby Task": {
+      "Key": 258
+    },
+    "Select Previous Nearby Task": {
+      "Key": 258,
+      "Modifiers": [340]
+    },
+    "Select Top Task in Stack": {
+      "Key": 266
+    },
+    "Set Window Size to 1920x1080": {
+      "Key": 292
+    },
+    "Set Window Size to 960x540": {
+      "Key": 291
+    },
+    "Show FPS": {
+      "Key": 290
+    },
+    "Show URL Buttons": {
+      "Key": 341
+    },
+    "Slide Task Modifier": {
+      "Key": 341
+    },
+    "Sound: Play / Pause Sounds ": {
+      "Key": 67
+    },
+    "Stop All Playing Sounds": {
+      "Key": 67,
+      "Modifiers": [340]
+    },
+    "Switch to Board 1": {
+      "Key": 49,
+      "Modifiers": [340]
+    },
+    "Switch to Board 10": {
+      "Key": 48,
+      "Modifiers": [340]
+    },
+    "Switch to Board 2": {
+      "Key": 50,
+      "Modifiers": [340]
+    },
+    "Switch to Board 3": {
+      "Key": 51,
+      "Modifiers": [340]
+    },
+    "Switch to Board 4": {
+      "Key": 52,
+      "Modifiers": [340]
+    },
+    "Switch to Board 5": {
+      "Key": 53,
+      "Modifiers": [340]
+    },
+    "Switch to Board 6": {
+      "Key": 54,
+      "Modifiers": [340]
+    },
+    "Switch to Board 7": {
+      "Key": 55,
+      "Modifiers": [340]
+    },
+    "Switch to Board 8": {
+      "Key": 56,
+      "Modifiers": [340]
+    },
+    "Switch to Board 9": {
+      "Key": 57,
+      "Modifiers": [340]
+    },
+    "Take Screenshot": {
+      "Key": 300
+    },
+    "Timer: Start / Pause Timer": {
+      "Key": 67
+    },
+    "Toggle Fullscreen": {
+      "Key": 293
+    },
+    "Undo": {
+      "Key": 90,
+      "Modifiers": [341]
+    },
+    "Unlock Image to Aspect Ratio Modifier": {
+      "Key": 342
+    },
+    "Unlock Image to Grid Modifier": {
+      "Key": 340
+    },
+    "Whiteboard: Change Pencil Tool Size": {
+      "Key": 82
+    },
+    "Zoom In": {
+      "Key": 61
+    },
+    "Zoom Level 10%": {
+      "Key": 48
+    },
+    "Zoom Level 100%": {
+      "Key": 50
+    },
+    "Zoom Level 1000%": {
+      "Key": 53
+    },
+    "Zoom Level 200%": {
+      "Key": 51
+    },
+    "Zoom Level 25%": {
+      "Key": 49
+    },
+    "Zoom Level 400%": {
+      "Key": 52
+    },
+    "Zoom Level 50%": {
+      "Key": 49
+    },
+    "Zoom Out": {
+      "Key": 45
+    }
+  },
+  "Theme": "Waves",
+  "DrawWindowBorder": false,
+  "DownloadTimeout": 4
+}

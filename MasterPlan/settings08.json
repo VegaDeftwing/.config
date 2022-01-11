@@ -1,0 +1,257 @@
+{
+  "version": "0.8.0-alpha.1",
+  "properties": {
+    "Theme": "Moonlight",
+    "DownloadDirectory": "",
+    "TargetFPS": 60,
+    "UnfocusedFPS": 60,
+    "FontSize": 30,
+    "DisplayMessages": true,
+    "DoubleClickCreatesCard": false,
+    "ShowGrid": true,
+    "SaveWindowPosition": true,
+    "FlashSelected": true,
+    "FocusOnElapsedTimers": true,
+    "NotifyOnElapsedTimers": true,
+    "PlayAlarmSound": true,
+    "AudioVolume": 80,
+    "ShowAboutDialogOnStart": true,
+    "BorderlessWindow": false,
+    "CustomFontPath": "",
+    "AlwaysShowNumbering": true,
+    "time unit": null,
+    "DisableSplashscreen": false,
+    "WindowPosition": {
+      "X": 1440,
+      "Y": 810,
+      "W": 1550,
+      "H": 1230
+    }
+  },
+  "keybindings": {
+    "DEBUG: Toggle Debug": {
+      "key": 1073741882
+    },
+    "Zoom Level 25%": {
+      "key": 49
+    },
+    "Zoom Level 50%": {
+      "key": 50
+    },
+    "Zoom Level 100%": {
+      "key": 51
+    },
+    "Zoom Level 200%": {
+      "key": 52
+    },
+    "Zoom Level 400%": {
+      "key": 53
+    },
+    "Zoom Level 1000%": {
+      "key": 54
+    },
+    "Zoom In": {
+      "key": 1073741911
+    },
+    "Zoom Out": {
+      "key": 1073741910
+    },
+    "Save Project": {
+      "key": 115,
+      "mods": [1073742048]
+    },
+    "Save Project As": {
+      "key": 115,
+      "mods": [1073742048, 1073742049]
+    },
+    "Open Project": {
+      "key": 111,
+      "mods": [1073742048]
+    },
+    "Open Context Menu": {
+      "mouse": 3
+    },
+    "Pan Up": {
+      "key": 119
+    },
+    "Pan Left": {
+      "key": 97
+    },
+    "Pan Down": {
+      "key": 115
+    },
+    "Pan Right": {
+      "key": 100
+    },
+    "Pan Modifier": {
+      "mouse": 2
+    },
+    "Fast Pan": {
+      "key": 1073742049
+    },
+    "New Checkbox Card": {
+      "key": 49,
+      "mods": [1073742049]
+    },
+    "New Number Card": {
+      "key": 50,
+      "mods": [1073742049]
+    },
+    "New Note Card": {
+      "key": 51,
+      "mods": [1073742049]
+    },
+    "New Sound Card": {
+      "key": 52,
+      "mods": [1073742049]
+    },
+    "New Image Card": {
+      "key": 53,
+      "mods": [1073742049]
+    },
+    "New Timer Card": {
+      "key": 54,
+      "mods": [1073742049]
+    },
+    "New Map Card": {
+      "key": 55,
+      "mods": [1073742049]
+    },
+    "Add to Selection Modifier": {
+      "key": 1073742049
+    },
+    "Remove From Selection Modifier": {
+      "key": 1073742050
+    },
+    "Card: Link With Line": {
+      "key": 122
+    },
+    "Delete Selected Cards": {
+      "key": 127
+    },
+    "Select All Cards": {
+      "key": 97,
+      "mods": [1073742048]
+    },
+    "Copy Selected Cards": {
+      "key": 99,
+      "mods": [1073742048]
+    },
+    "Paste Selected Cards": {
+      "key": 118,
+      "mods": [1073742048]
+    },
+    "External Clipboard Paste": {
+      "key": 118,
+      "mods": [1073742048, 1073742049]
+    },
+    "Center View to Origin": {
+      "key": 8
+    },
+    "Focus On Selected Cards": {
+      "key": 102
+    },
+    "Textbox: Copy Selected Text": {
+      "key": 99,
+      "mods": [1073742048]
+    },
+    "Textbox: Cut Selected Text": {
+      "key": 120,
+      "mods": [1073742048]
+    },
+    "Textbox: Paste Copied Text": {
+      "key": 118,
+      "mods": [1073742048]
+    },
+    "Textbox: Select All Text": {
+      "key": 97,
+      "mods": [1073742048]
+    },
+    "Card: Collapse": {
+      "key": 99,
+      "mods": [1073742049]
+    },
+    "Undo": {
+      "key": 122,
+      "mods": [1073742048]
+    },
+    "Redo": {
+      "key": 122,
+      "mods": [1073742048, 1073742049]
+    },
+    "Set Window Size to 960x540": {
+      "key": 1073741883
+    },
+    "Set Window Size to 1920x1080": {
+      "key": 1073741884
+    },
+    "Toggle Fullscreen": {
+      "key": 1073741892
+    },
+    "Image: Unlock Aspect Ratio Modifier": {
+      "key": 1073742049
+    },
+    "Checkbox: Complete": {
+      "key": 32
+    },
+    "Numbered: Increment Value": {
+      "key": 32
+    },
+    "Numbered: Decrement Value": {
+      "key": 32,
+      "mods": [1073742049]
+    },
+    "Sound: Toggle Playback": {
+      "key": 32
+    },
+    "Sound: Jump Forward 1s": {
+      "key": 1073741903,
+      "mods": [1073742048]
+    },
+    "Sound: Jump Backward 1s": {
+      "key": 1073741904,
+      "mods": [1073742048]
+    },
+    "Timer: Start / Stop Timer": {
+      "key": 32
+    },
+    "Map: Pick Color": {
+      "key": 1073742050
+    },
+    "Map: Pointer Tool": {
+      "key": 113
+    },
+    "Map: Pencil Tool": {
+      "key": 101
+    },
+    "Map: Eraser Tool": {
+      "key": 114
+    },
+    "Map: Fill Tool": {
+      "key": 102
+    },
+    "Map: Line Tool": {
+      "key": 118
+    },
+    "Map: Quick Line": {
+      "key": 1073742049
+    },
+    "Map: Open Palette": {
+      "key": 9
+    },
+    "Open Find Menu": {
+      "key": 102,
+      "mods": [1073742048]
+    },
+    "Find: Next Card": {
+      "key": 102,
+      "mods": [1073742048]
+    },
+    "Find: Prev": {
+      " Card": {
+        "key": 102,
+        "mods": [1073742048, 1073742049]
+      }
+    }
+  }
+}

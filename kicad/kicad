@@ -1,17 +1,17 @@
-KicadFramePos_x=4
-KicadFramePos_y=16
-KicadFrameSize_x=1911
-KicadFrameSize_y=1042
+KicadFramePos_x=5764
+KicadFramePos_y=286
+KicadFrameSize_x=951
+KicadFrameSize_y=503
 KicadFrameMaximized=0
-KicadFramePerspective=layout2|name=MainToolbar;caption=;state=139644;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=273;besth=36;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ProjectTree;caption=;state=508;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=331;besth=-1;minw=150;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Launcher;caption=;state=139644;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=525;besth=70;minw=525;minh=70;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MsgPanel;caption=;state=131452;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=98;besth=39;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(1,6,0)=36|dock_size(4,3,0)=331|dock_size(1,1,0)=70|dock_size(5,0,0)=98|
-KicadFrameMostRecentlyUsedPath=/home/vega/Documents/DistingBlank/
+KicadFramePerspective=layout2|name=MainToolbar;caption=;state=139644;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=273;besth=36;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ProjectTree;caption=;state=508;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=331;besth=-1;minw=150;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Launcher;caption=;state=139644;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=525;besth=70;minw=525;minh=70;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MsgPanel;caption=;state=131452;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=96;besth=39;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(1,6,0)=36|dock_size(4,3,0)=331|dock_size(1,1,0)=70|dock_size(5,0,0)=96|
+KicadFrameMostRecentlyUsedPath=/home/vega/git/ext/Alpha/PCB_kicad/
 LeftWinWidth=331
-file1=/home/vega/Documents/DistingBlank/DistingBlank.pro
-file2=/run/media/vega/raid/School/Current/miniplaits/Miniplaits/Miniplaits.pro
-file3=/home/vega/Documents/demopro/demopro.pro
-file4=/home/vega/git/local/kicadjack/breadboardjack/breadboardjack.pro
-file5=/home/vega/Telegram Desktop/atmega328Kent/day1.pro
-file6=/run/media/vega/raid/Documents/1hplight/1hplight.pro
-file7=
-file8=
-file9=
+file1=/home/vega/git/ext/Alpha/PCB_kicad/alpha_pro_micro.pro
+file2=/home/vega/git/ext/Alpha/PCB_kicad/.
+file3=/home/vega/Documents/ANAblack/ANABlack/ANABlack.pro
+file4=/home/vega/Documents/DistingBlank/DistingBlank.pro
+file5=/run/media/vega/raid/School/Current/miniplaits/Miniplaits/Miniplaits.pro
+file6=/home/vega/Documents/demopro/demopro.pro
+file7=/home/vega/git/local/kicadjack/breadboardjack/breadboardjack.pro
+file8=/home/vega/Telegram Desktop/atmega328Kent/day1.pro
+file9=/run/media/vega/raid/Documents/1hplight/1hplight.pro

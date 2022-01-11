@@ -82,7 +82,7 @@
       "Key": 57,
       "Modifiers": [341]
     },
-    "Cut Tasks / Text": {
+    "Cut Tasks": {
       "Key": 88,
       "Modifiers": [341]
     },
@@ -141,7 +141,7 @@
       "Key": 86,
       "Modifiers": [341, 340]
     },
-    "Paste Tasks / Text": {
+    "Paste Tasks": {
       "Key": 86,
       "Modifiers": [341]
     },
@@ -267,6 +267,22 @@
     "Take Screenshot": {
       "Key": 300
     },
+    "Textbox: Copy Text": {
+      "Key": 67,
+      "Modifiers": [341]
+    },
+    "Textbox: Cut Text": {
+      "Key": 88,
+      "Modifiers": [341]
+    },
+    "Textbox: Paste Text": {
+      "Key": 86,
+      "Modifiers": [341]
+    },
+    "Textbox: Select All Text": {
+      "Key": 65,
+      "Modifiers": [341]
+    },
     "Timer: Start / Pause Timer": {
       "Key": 67
     },
@@ -316,5 +332,10 @@
   },
   "Theme": "Waves",
   "DrawWindowBorder": false,
-  "DownloadTimeout": 4
+  "DownloadTimeout": 4,
+  "AudioVolume": 80,
+  "AudioSampleRate": 44100,
+  "AudioSampleBuffer": 2048,
+  "CopyTasksToClipboard": true,
+  "DoubleClickRate": 500
 }

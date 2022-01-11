@@ -1,0 +1,4 @@
+configuration {
+font: "GohuFont Nerd Font Mono 40";
+}
+@theme "/usr/share/rofi/themes/sweet-mars.rasi"

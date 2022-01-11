@@ -33,7 +33,7 @@ line-size = 0
 bottom = true
 cursor-click = pointer
 cursor-scroll = ns-resize
-modules-left = mpd hostname who
+modules-left = mpd hostname who info-hackspeed
 modules-center = i3
 modules-right = wireless-network ip uptime
 ;wm-restack = i3
@@ -132,7 +132,7 @@ font-3 = Font Awesome 5 Free:pixelsize=10;3
 font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
 font-5 = Font Awesome 5 Brands:pixelsize=10;3
 
-modules-left = date volume
+modules-left = date volume craft
 modules-center = i3
 modules-right = cpu memory
 
@@ -592,6 +592,17 @@ format-suffix = "°C"
 format-prefix-foreground = #FFBB00
 format-underline = #FFBB00
 
+[module/craft]
+type = custom/script
+exec = /home/vega/.config/polybar/getcraft2.sh
+tail = false
+format-foreground = ${colors.foreground}
+;format-background = ${colors.background}
+format-prefix = "Players Online:"
+format-suffix = ""
+format-prefix-foreground = #ddd
+interval = 140
+
 [module/battery]
 type = internal/battery
 
@@ -613,3 +624,8 @@ adapter = ACAD
 ;
 ; Default: 5
 poll-interval = 5
+
+[module/info-hackspeed]
+type = custom/script
+exec = ~/.config/polybar/info-hackspeed.sh
+tail = true

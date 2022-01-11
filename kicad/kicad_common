@@ -1,4 +1,4 @@
-WorkingDir=/home/vega
+WorkingDir=/home/vega/git/ext/Alpha/PCB_kicad
 ShowEnvVarWarningDialog=1
 UseIconsInMenus=1
 IconScale=0
@@ -7,6 +7,7 @@ ZoomNoCenter=0
 AutoPAN=1
 OpenGLAntialiasingMode=0
 CairoAntialiasingMode=0
+Editor=nano
 [EnvironmentVariables]
 KICAD_SYMBOL_DIR=/usr/share/kicad/library
 KICAD_TEMPLATE_DIR=/usr/share/kicad/template

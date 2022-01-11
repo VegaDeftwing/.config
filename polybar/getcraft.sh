@@ -1,0 +1,1 @@
+head -n 2 ~/.config/craftonline | tail -n 1

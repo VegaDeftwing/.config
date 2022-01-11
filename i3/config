@@ -41,6 +41,7 @@ exec_always --no-startup-id echo "55" > /home/vega/leds.fifo
 
 #All of my mappings are for a dvorak keyboard, so, you probably want to change this
 set $mod Mod4
+floating_modifier Mod4
 set $kill apostrophe
 
 set $termmain deepin-terminal
@@ -120,7 +121,7 @@ exec --no-startup-id xscreensaver
 exec --no-startup-id xfce4-clipman
 
 # Start Input Service
-exec --no-startup-id ibus-daemon
+exec --no-startup-id ibus-daemon -dr
 
 # Start P2P Services
 exec --no-startup-id ipfs daemon
@@ -147,6 +148,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec_always sh /home/vega/.config/i3/monitor.sh
 exec_always --no-startup-id nitrogen --restore
 exec_always xset s off -dpms
+exec_always xinput map-to-output $(xinput | grep 'Tablet Monitor stylus' | awk -F '=' '{print $2}' | cut -f 1) HDMI-A-0
 bindsym control+mod1+r exec --no-startup-id rofi-theme-selector
 bindsym control+mod1+u exec --no-startup-id pavucontrol
 bindsym Print exec --no-startup-id spectacle
@@ -178,6 +180,7 @@ exec --no-startup-id "python ~/git/local/table/table.py"
 
 #pulse is connected to jack, and starting this with the system makes everything easier 
 exec --no-startup-id qjackctl
+#exec --no-startup-id pulseeffects
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
@@ -221,10 +224,14 @@ bindsym $mod+Shift+$restartkey restart
 bindsym $mod+Shift+$exitkey exec "i3-nagbar -t warning -m 'Exit i3 and end X session?' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+$lockkey exec ~/.config/i3/lock.sh
 # ROFI
-bindsym $mod+o exec --no-startup-id "rofi -show run"
+bindsym $mod+o exec --no-startup-id "rofi -combi-modi run,drun,window -show combi -modi combi"
 bindsym $mod+shift+o exec --no-startup-id "~/.config/rofi/splatmoji/splatmoji copy"
 bindsym $mod+a exec --no-startup-id "~/.config/i3/crofi/crofi.sh"
-bindsym $mod+shift+a exec --no-startup-id speedcrunch
+bindsym $mod+shift+a exec --no-startup-id i3expo -s
+
+exec --no-startup-id i3expo-daemon
+
+bindsym $mod+c exec --no-startup-id speedcrunch
 
 bindsym $mod+shift+semicolon floating enable, resize set 11520 2160, move position 0 px 0 px
 
@@ -335,8 +342,8 @@ no_focus [class=”plasmashell”]
 
 
 
-exec telegram-desktop
-exec discord
+exec_always telegram-start.sh
+exec discord-ns
 exec whalebird
 exec --no-startup-id typora /mnt/win/VegaProductions/OpGuidesHugoSrc
 exec --no-startup-id typora /mnt/win/VegaProductions/Journal

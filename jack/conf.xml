@@ -4,15 +4,13 @@ JACK settings, as persisted by D-Bus object.
 You probably don't want to edit this because
 it will be overwritten next time jackdbus saves.
 -->
-<!-- Thu Mar 18 21:30:05 2021 -->
+<!-- Sat Jan  8 23:01:15 2022 -->
 <jack>
  <engine>
   <option name="driver">alsa</option>
   <option name="realtime">true</option>
-  <option name="realtime-priority">10</option>
   <option name="verbose">false</option>
-  <option name="port-max">2048</option>
-  <option name="sync">true</option>
+  <option name="sync">false</option>
  </engine>
  <drivers>
   <driver name="proxy">
@@ -29,8 +27,6 @@ it will be overwritten next time jackdbus saves.
    <option name="playback">hw:USB</option>
    <option name="rate">44100</option>
    <option name="period">512</option>
-   <option name="nperiods">2</option>
-   <option name="hwmon">false</option>
    <option name="hwmeter">false</option>
    <option name="duplex">true</option>
    <option name="softmode">false</option>
@@ -41,6 +37,8 @@ it will be overwritten next time jackdbus saves.
   <driver name="alsarawmidi">
   </driver>
   <driver name="dummy">
+   <option name="capture">18</option>
+   <option name="playback">20</option>
   </driver>
   <driver name="loopback">
   </driver>

@@ -344,9 +344,11 @@ no_focus [class=”plasmashell”]
 
 exec_always telegram-start.sh
 exec discord-ns
-exec whalebird
+#exec whalebird
 exec --no-startup-id typora /mnt/win/VegaProductions/OpGuidesHugoSrc
 exec --no-startup-id typora /mnt/win/VegaProductions/Journal
+exec --no-startup-id typora /mnt/data/School/Current/Capstone/AnalogDrumMachine/Journal
+exec --no-startup-id typora /mnt/data/School/Current/VR/Journal.md
 exec --no-startup-id ~/git/ext/masterplan/bin/MasterPlan-Linux-Release/MasterPlan
 #exec --no-startup-id typora /mnt/win/VegaProductions/ImageFiles/Inktober2020/list.md
 #workspace $workspace9name output DisplayPort-1

@@ -1,8 +1,9 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/home/vega/.local/bin:/usr/local/bin:/usr/bin:$PATH
   source /etc/profile.d/autojump.zsh
 # Path to your oh-my-zsh installation.
   export ZSH=/home/vega/.oh-my-zsh
+  source /opt/ros/noetic/setup.zsh
 #eval "$(starship init zsh)"
 #(cat ~/.cache/wal/sequences &)
 #echo "
@@ -88,11 +89,6 @@ function geti3 {
     echo "⎩"
     hr
   elif [ $currentws = "5" ]; then	
-    echo "⎧tmines -f to play Minesweeper"
-    echo "⎪"
-    echo "⎪"
-    echo "⎪"
-    echo "⎩"
     hr
   elif [ $currentws = "6" ]; then	
 	  cd ~/git/local/openg2
@@ -228,6 +224,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git thefuck lol colorize archlinux wd)
+plugins=(zsh-autosuggestions)
 #eval $(thefuck --alias)
 
 source $ZSH/oh-my-zsh.sh
@@ -264,9 +261,14 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lss="exa --group-directories-first -la --git --extended"
 alias ls="lsd -la"
-export PATH=/home/vega/.local/bin:$PATH
+#export PATH=/home/vega/.local/bin:$PATH
 
 [ -f ~/.resh/shellrc ] && source ~/.resh/shellrc
 
 #source /home/vega/.config/broot/launcher/bash/brautoload -U +X bashcompinit && bashcompinit
 #complete -o nospace -C /usr/local/bin/bitcomplete bit
+
+# keybinds
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+export QSYS_ROOTDIR="/home/vega/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"

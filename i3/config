@@ -33,21 +33,13 @@
 #   |_|  |_|\__,_|_|_| |_| |_|   \__,_|_| |_|\___|\__|_|\___/|_| |_|___/
 #
 #
-# exec_always --no-startup-id setxkbmap lyrxkb -option "lv3:caps_switch"
-
-# show reload
-exec tail -f /home/vega/leds.fifo | socat -t 0 - UDP:192.168.1.119:49161
-exec_always --no-startup-id echo "55" > /home/vega/leds.fifo
 
 #All of my mappings are for a dvorak keyboard, so, you probably want to change this
 set $mod Mod4
 floating_modifier Mod4
 set $kill apostrophe
 
-set $termmain deepin-terminal
-
-#set $termmain kitty
-#set $termsecondary "kitty -e zsh"
+set $termmain kitty
 
 set $mainfont ShareTechMono-Regular 14px
 set $fontbar Ohsnap, TengwarFormalCSUR 14px
@@ -123,10 +115,13 @@ exec --no-startup-id xfce4-clipman
 # Start Input Service
 exec --no-startup-id ibus-daemon -dr
 
+# Wallpaper and colors
+exec_always --no-startup-id $HOME/.config/i3/restore.sh
+
 # Start P2P Services
-exec --no-startup-id ipfs daemon
-exec --no-startup-id rad daemon-ipfs
-exec --no-startup-id rad daemon-radicle
+# exec --no-startup-id ipfs daemon
+# exec --no-startup-id rad daemon-ipfs
+# exec --no-startup-id rad daemon-radicle
 
 # Start DL Services
 ## Game/Software
@@ -146,7 +141,6 @@ exec --no-startup-id dunst
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # Monitor Setup
 exec_always sh /home/vega/.config/i3/monitor.sh
-exec_always --no-startup-id nitrogen --restore
 exec_always xset s off -dpms
 exec_always xinput map-to-output $(xinput | grep 'Tablet Monitor stylus' | awk -F '=' '{print $2}' | cut -f 1) HDMI-A-0
 bindsym control+mod1+r exec --no-startup-id rofi-theme-selector
@@ -171,8 +165,8 @@ exec_always "xrdb ~/.Xresources"
 exec --no-startup-id caffeine
 
 # PERIPHERAL HARDWARE SPECIFIC SETTINGS
-exec --no-startup-id "python2 ~/.config/usb/rad.py"
-exec --no-startup-id "python ~/git/local/table/table.py"
+# exec --no-startup-id "python2 ~/.config/usb/rad.py"
+# exec --no-startup-id "python ~/git/local/table/table.py"
 
 #####################################################################################################################
 #################                          audio settings                                           #################
@@ -227,9 +221,6 @@ bindsym $mod+$lockkey exec ~/.config/i3/lock.sh
 bindsym $mod+o exec --no-startup-id "rofi -combi-modi run,drun,window -show combi -modi combi"
 bindsym $mod+shift+o exec --no-startup-id "~/.config/rofi/splatmoji/splatmoji copy"
 bindsym $mod+a exec --no-startup-id "~/.config/i3/crofi/crofi.sh"
-bindsym $mod+shift+a exec --no-startup-id i3expo -s
-
-exec --no-startup-id i3expo-daemon
 
 bindsym $mod+c exec --no-startup-id speedcrunch
 
@@ -326,35 +317,22 @@ assign [class="Vivaldi-stable"] → $workspace9name
 assign [class="Firefox"] → $workspace10name
 assign [class="MasterPlan v0.5.4-1"] → $workspace6name
 
-#Plasma Compatibility
-exec --no-startup-id wmctrl -c Plasma
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
-
-for_window [class="plasmashell"] floating enable
-for_window [class="Plasma"] floating enable
-for_window [class="krunner"] floating enable
-for_window [class="Kmix"] floating enable
-for_window [class="Klipper"] floating enable
-for_window [class="Plasmoidviewer"] floating enable
-
-no_focus [class=”plasmashell”]
-
-
-
-
 exec_always telegram-start.sh
 exec discord-ns
-#exec whalebird
+exec whalebird
 exec --no-startup-id typora /mnt/win/VegaProductions/OpGuidesHugoSrc
-exec --no-startup-id typora /mnt/win/VegaProductions/Journal
-exec --no-startup-id typora /mnt/data/School/Current/Capstone/AnalogDrumMachine/Journal
-exec --no-startup-id typora /mnt/data/School/Current/VR/Journal.md
-exec --no-startup-id ~/git/ext/masterplan/bin/MasterPlan-Linux-Release/MasterPlan
+#exec --no-startup-id typora /mnt/win/VegaProductions/Journal
+#exec --no-startup-id typora /mnt/data/School/Current/Capstone/AnalogDrumMachine/Journal
+#exec --no-startup-id typora /mnt/data/School/Current/VR/Journal.md
+#exec --no-startup-id ~/git/ext/masterplan/bin/MasterPlan-Linux-Release/MasterPlan
 #exec --no-startup-id typora /mnt/win/VegaProductions/ImageFiles/Inktober2020/list.md
 #workspace $workspace9name output DisplayPort-1
 #workspace $workspace3name output HDMI-A-0
 #workspace $workspace8name output DisplayPort-0
 #workspace $workspace6name output DisplayPort-2
+exec --no-startup-id easyeffects
+#exec --no-startup-id qpwgraph
+#exec --no-startup-id condution
 
 #exec /opt/unreal-engine/Engine/Binaries/Linux/UE4Editor
 
@@ -427,14 +405,15 @@ set $urgind #900000
 
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
-#set_from_resource $ug i3wm.color3 #f0f0f0
-#client.focused          $bg     $bg     $fg  $bg       $bg
-#client.focused_inactive $bg     $bg     $fg  $bg       $bg
-#client.unfocused        $bg     $bg     $fg  $bg       $bg
-#client.urgent           $bg     $bg     $fg  $bg       $bg
-#client.placeholder      $bg     $bg     $fg  $bg       $bg
 
-#client.background       $bg
+client.focused          $fg     $fg     $bg  $fg       $bg
+client.focused_inactive $fg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
+
 
 # class                 border  backgr. text    indicator
 # client.focused          $hilidk #1C2124 #ffffff $gray00
@@ -444,13 +423,13 @@ set_from_resource $bg i3wm.color2 #f0f0f0
 # client.placeholder      $gray00 $gray01 $gray00 $gray00
 # client.background		$gray00
 
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
-client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+# client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+# client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+# client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+# client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+# client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
-client.background       #F8F8F2
+# client.background       #F8F8F2
 
 #
 #             .-                       .-.    .-.                                                         .

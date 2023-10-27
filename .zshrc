@@ -272,3 +272,5 @@ alias ls="lsd -la"
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 export QSYS_ROOTDIR="/home/vega/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
+
+eval "$(starship init zsh)"

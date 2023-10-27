@@ -8,3 +8,5 @@ make_brush_color_saturated=Alt+]
 rotate_canvas_left=_
 rotate_canvas_right=+
 split_alpha_into_mask='
+view_zoom_in==
+view_zoom_out=-

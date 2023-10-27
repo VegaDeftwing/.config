@@ -15,5 +15,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 polybar aux2 &
 polybar vega &
 polybar aux &
-polybar aux3
+polybar aux3 &
 echo "Bars launched..."
+
+python /home/vega/git/ext/wal-vivaldi/generator.py

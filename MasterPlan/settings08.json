@@ -1,36 +1,59 @@
 {
-  "version": "0.8.0-alpha.1",
+  "version": "0.8.0-alpha.7.1",
   "properties": {
-    "Theme": "Moonlight",
+    "Theme": "Black Tie",
     "DownloadDirectory": "",
     "TargetFPS": 60,
     "UnfocusedFPS": 60,
-    "FontSize": 30,
     "DisplayMessages": true,
-    "DoubleClickCreatesCard": false,
+    "DoubleClickMode": "Creates card of prev. type",
     "ShowGrid": true,
     "SaveWindowPosition": true,
     "FlashSelected": true,
-    "FocusOnElapsedTimers": true,
+    "FocusOnElapsedTimers": false,
     "NotifyOnElapsedTimers": true,
     "PlayAlarmSound": true,
     "AudioVolume": 80,
     "ShowAboutDialogOnStart": true,
-    "BorderlessWindow": false,
+    "ReversePan": false,
     "CustomFontPath": "",
-    "AlwaysShowNumbering": true,
+    "ScreenshotPath": "",
+    "AutoLoadLastProject": true,
+    "SmoothMovement": true,
+    "NumberTopLevelCards": true,
+    "FocusOnSelectingWithKeys": true,
+    "FocusOnUndo": true,
+    "OutlineWindow": false,
+    "Automatic Backups": true,
+    "Backup Timer": 10,
+    "Max Automatic Backup Count": 6,
+    "Mouse Wheel Sensitivity": "100%",
+    "Zoom to Cursor": true,
+    "Card Shadows": true,
+    "Flash Deadlines": true,
+    "Max Internal Image Buffer Size": "2048",
+    "Position New Cards in Stack": false,
+    "Window Transparency": 1,
+    "Transparency Mode": "Never",
+    "BorderlessWindow": false,
+    "AlwaysShowNumbering": false,
+    "Display Deadlines As": "",
     "time unit": null,
-    "DisableSplashscreen": false,
     "WindowPosition": {
-      "X": 1440,
-      "Y": 810,
-      "W": 1550,
-      "H": 1230
-    }
+      "X": 3850,
+      "Y": 34,
+      "W": 3820,
+      "H": 2084
+    },
+    "SuccesfulLoad": true
   },
+  "recent files": ["/home/vega/newmain.plan"],
   "keybindings": {
-    "DEBUG: Toggle Debug": {
-      "key": 1073741882
+    "DEBUG: Toggle Debug View": {
+      "key": 1073741893
+    },
+    "Zoom Level 5%": {
+      "key": 48
     },
     "Zoom Level 25%": {
       "key": 49
@@ -55,6 +78,9 @@
     },
     "Zoom Out": {
       "key": 1073741910
+    },
+    "Take Screenshot": {
+      "key": 1073741892
     },
     "Save Project": {
       "key": 115,
@@ -89,6 +115,57 @@
     "Fast Pan": {
       "key": 1073742049
     },
+    "Move Card Down": {
+      "key": 1073741905,
+      "mods": [1073742048]
+    },
+    "Move Card Up": {
+      "key": 1073741906,
+      "mods": [1073742048]
+    },
+    "Move Card Right": {
+      "key": 1073741903,
+      "mods": [1073742048]
+    },
+    "Move Card Left": {
+      "key": 1073741904,
+      "mods": [1073742048]
+    },
+    "Select Card Below": {
+      "key": 1073741905
+    },
+    "Select Card Above": {
+      "key": 1073741906
+    },
+    "Select Card to Right": {
+      "key": 1073741903
+    },
+    "Select Card to Left": {
+      "key": 1073741904
+    },
+    "Select Card at Top of Stack": {
+      "key": 1073741898
+    },
+    "Select Card at Bottom of Stack": {
+      "key": 1073741901
+    },
+    "Select Card at Top of Indent in Stack": {
+      "key": 1073741899
+    },
+    "Select Card at Bottom of Indent in Stack": {
+      "key": 1073741902
+    },
+    "Select All Cards in Indentation": {
+      "key": 32,
+      "mods": [1073742048]
+    },
+    "Select Next Card": {
+      "key": 9
+    },
+    "Select Prev Card": {
+      "key": 9,
+      "mods": [1073742049]
+    },
     "New Checkbox Card": {
       "key": 49,
       "mods": [1073742049]
@@ -117,14 +194,26 @@
       "key": 55,
       "mods": [1073742049]
     },
+    "New Sub-Page Card": {
+      "key": 56,
+      "mods": [1073742049]
+    },
+    "New Link Card": {
+      "key": 57,
+      "mods": [1073742049]
+    },
     "Add to Selection Modifier": {
       "key": 1073742049
     },
     "Remove From Selection Modifier": {
       "key": 1073742050
     },
-    "Card: Link With Line": {
+    "Card: Connect Cards": {
       "key": 122
+    },
+    "Card: Disconnect From All Cards": {
+      "key": 122,
+      "mods": [1073742049]
     },
     "Delete Selected Cards": {
       "key": 127
@@ -133,15 +222,23 @@
       "key": 97,
       "mods": [1073742048]
     },
+    "Deselect All Cards": {
+      "key": 97,
+      "mods": [1073742048, 1073742049]
+    },
     "Copy Selected Cards": {
       "key": 99,
+      "mods": [1073742048]
+    },
+    "Cut Selected Cards": {
+      "key": 120,
       "mods": [1073742048]
     },
     "Paste Selected Cards": {
       "key": 118,
       "mods": [1073742048]
     },
-    "External Clipboard Paste": {
+    "Paste From External Clipboard": {
       "key": 118,
       "mods": [1073742048, 1073742049]
     },
@@ -149,7 +246,8 @@
       "key": 8
     },
     "Focus On Selected Cards": {
-      "key": 102
+      "key": 102,
+      "mods": [1073742049]
     },
     "Textbox: Copy Selected Text": {
       "key": 99,
@@ -180,19 +278,32 @@
       "mods": [1073742048, 1073742049]
     },
     "Set Window Size to 960x540": {
-      "key": 1073741883
+      "key": 1073741890
     },
     "Set Window Size to 1920x1080": {
-      "key": 1073741884
+      "key": 1073741891
     },
     "Toggle Fullscreen": {
-      "key": 1073741892
+      "key": 13,
+      "mods": [1073742048]
     },
-    "Image: Unlock Aspect Ratio Modifier": {
+    "Image: Unlock Aspect Ratio (Hold)": {
       "key": 1073742049
     },
     "Checkbox: Complete": {
       "key": 32
+    },
+    "Checkbox: Edit Description": {
+      "key": 13
+    },
+    "Note: Edit Description": {
+      "key": 13
+    },
+    "Numbered: Edit Description": {
+      "key": 13
+    },
+    "Timer: Edit Description": {
+      "key": 13
     },
     "Numbered: Increment Value": {
       "key": 32
@@ -203,6 +314,10 @@
     },
     "Sound: Toggle Playback": {
       "key": 32
+    },
+    "Sound: Stop All Playback": {
+      "key": 32,
+      "mods": [1073742048]
     },
     "Sound: Jump Forward 1s": {
       "key": 1073741903,
@@ -237,11 +352,7 @@
       "key": 1073742049
     },
     "Map: Open Palette": {
-      "key": 9
-    },
-    "Open Find Menu": {
-      "key": 102,
-      "mods": [1073742048]
+      "key": 103
     },
     "Find: Next Card": {
       "key": 102,
@@ -252,6 +363,42 @@
         "key": 102,
         "mods": [1073742048, 1073742049]
       }
+    },
+    "Sub-Page: Edit Description": {
+      "key": 13
+    },
+    "Sub-Page: Open": {
+      "key": 96
+    },
+    "Sub-Page: Close": {
+      "key": 96
+    },
+    "Link: Edit Description": {
+      "key": 13
+    },
+    "Link: Jump to Linked Card": {
+      "key": 13
+    },
+    "Resize Multiple (Hold)": {
+      "key": 1073742049
+    },
+    "Main Menu: Open Help (website)": {
+      "key": 1073741882
+    },
+    "Main Menu: Open Create Menu": {
+      "key": 1073741883
+    },
+    "Main Menu: Open Edit Menu": {
+      "key": 1073741884
+    },
+    "Main Menu: Open Hierarchy Menu": {
+      "key": 1073741885
+    },
+    "Main Menu: Open Stats Menu": {
+      "key": 1073741886
+    },
+    "Main Menu: Open Deadlines Menu": {
+      "key": 1073741887
     }
   }
 }

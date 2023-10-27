@@ -14,9 +14,9 @@
   "PanToFocusOnZoom": true,
   "WindowPosition": {
     "X": 3849,
-    "Y": 9,
+    "Y": 33,
     "Width": 3822,
-    "Height": 2110
+    "Height": 2086
   },
   "SaveWindowPosition": true,
   "ScrollwheelSensitivity": 1,
@@ -109,6 +109,13 @@
     "Focus View on Tasks": {
       "Key": 70
     },
+    "GUI: Tab Focus Next": {
+      "Key": 258
+    },
+    "GUI: Tab Focus Prev": {
+      "Key": 258,
+      "Modifiers": [340]
+    },
     "Line: Select Next Line Ending": {
       "Key": 67
     },
@@ -124,6 +131,9 @@
     },
     "Map: Toggle Rectangle Tool": {
       "Key": 82
+    },
+    "Open Settings": {
+      "Key": 290
     },
     "Pan Down": {
       "Key": 83
